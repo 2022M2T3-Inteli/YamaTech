@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+body {
+    display: flex
+}
+
+.column {
+    width: 300px;
+    background-color: green;
+}
+
+.main {
+    width: 300px;
+    background-color: pink;
+}
+
+.logo {
+    width: 150px;
+    
+}
