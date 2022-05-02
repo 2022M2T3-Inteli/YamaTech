@@ -2,7 +2,8 @@
     margin: 0;
 }
 body {
-    display: flex
+    display: flex;
+    align-items: center;
 }
 
 .column {
@@ -18,4 +19,7 @@ body {
 .logo {
     width: 150px;
     
+}
+.forms{
+    border: 1px solid #111;
 }
