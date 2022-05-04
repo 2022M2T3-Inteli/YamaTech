@@ -95,8 +95,8 @@ body {
 
 .navigation ul li b:nth-child(1) {
     position: absolute;
-    top: -1.25em;
-    height: 1.25em;
+    top: -20px;
+    height: 20px;
     width: 100%;
     background: var(--light-main-color);
     display: none;
@@ -110,7 +110,7 @@ body {
     width: 100%;
     height: 100%;
     background: var(--secondary-color);
-    border-bottom-right-radius: 1.25;
+    border-bottom-right-radius: 20px;
 }
 
 .navigation ul li b:nth-child(2) {
