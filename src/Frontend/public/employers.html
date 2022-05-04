@@ -1,67 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
+    <!-- Comentários-->
+    <head>
+        <link rel="stylesheet" href="employers.css">
+    </head>
     <body>
-    <table border="1">
+    <h1>Tabela de Alocação dos Funcionários</h1>
+    <table>
+         <tr class="background">
+                <th class="cel_style"> Nome Completo</th>
+                <th class="cel_style"> Cargo</th>
+                <th class="cel_style"> Especialidade</th>
+                <th class="cel_style"> Horas Disponíveis</th>
+                <th class="cel_style">Projeto Alocado</th>
+                <th class="background_white" rowspan="7" style="vertical-align: top;"><img src="img/user_image.png" width="50" alt=""></th>
+            </tr>
+             
+         <tr>
+            <th class="background"> Funcionário 1</th>
+                <div class="blue_background">
+                    <td>Ux Designer</td>
+                    <td>80 h</td>
+                    <td>30 h</td>
+                    <td>Funcionário 5</td>
+         </div>
+            </tr>
+
         <tr>
-            <th>Nome Completo</th>
-            <th>Cargo</th>
-            <th>Especialidade</th>
-            <th>Horas Disponíveis</th>
-            <th>Projeto Alocado</th>
-        </tr>
-        <tr>
-            <th>Funcionário 1</th>
-            <td>Ux Designer</td>
-            <td>80 h</td>
-            <td>30 h</td>
-            <td>Funcionário 5</td>
-        </tr>
-        <tr>
-            <th>Funcionário 2</th>
+            <th class="background">Funcionário 2</th>
             <td>Engenheiro de dados</td>
             <td>30 h</td>
             <td>Funcionário 4</td>
             <td>Funcionário 5</td>
         </tr>
+        
         <tr>
-            <th>Funcionário 3</th>
+            <th class="background">Funcionário 3</th>
             <td>Analista de sistemas</td>
             <td>20 h</td>
             <td>Funcionário 4</td>
-            <td>Funcionário 5</td>
+            <td>ahah</td>
         </tr>
         <tr>
-            <th>Funcionário 4</th>
+            <th class="background">Funcionário 4</th>
             <td>Dev Full Stack</td>
             <td>40 h</td>
             <td>Funcionário 4</td>
             <td>Funcionário 5</td>
         </tr>
         <tr>
-            <th>Funcionário 5</th>
+            <th class="background"> Funcionário 5</th>
             <td>Master Screwed</td>
             <td>10 h</td>
             <td>Funcionário 4</td>
             <td>Funcionário 5</td>
         </tr>
         <tr>
-            <th>Funcionário 6</th>
+            <th class="background">Funcionário 6</th>
             <td>Engenheiro de Software</td>
             <td>15 h</td>
             <td>Funcionário 4</td>
             <td>Funcionário 5</td>
         </tr>
     </table>
-
     
-        <button type="button">Editar</button>
-        <button type="button">Incluir Funcionário</button>
-        <button type="button">Excluir Funcionário</button>
-        <img class="user_imag" src ="img/user_image.png">
+ 
+        <button class="background_gray" type="button">Editar</button>
+        <button class="background_red"type="button">Excluir Funcionário</button>
+        <button class="background_green"type="button">Incluir Funcionário</button>
+        <img class="user_imag" src ="assets/user_image.png">
     </body>
     
-    
+</html>
