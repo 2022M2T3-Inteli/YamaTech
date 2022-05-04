@@ -1,0 +1,49 @@
+.line{
+    position:fixed;
+    height: 12vh;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: #E2E2E2;
+}
+.user{
+    position: fixed;
+    height: 6vh;
+    width: 6vh;
+    right: 10vh;
+    top: 3vh;
+}
+.bars{
+    position: fixed;
+    height: 8vh;
+    width: 12vh;
+    left: 10vh;
+    top: 2vh;
+}
+.body{
+    margin: 17vh 14vw 0vh 14vw;
+    align-items: center;
+}
+.body .item{
+    width: 100wh;
+    height: 20vh;
+    background-color: #111;
+}
+.smallrectangle1{
+}
+.smallrectangle2{
+}
+.smallrectangle3{
+}
+.smallrectangle4{
+}
+.bigrectangle1{
+}
+.bigrectangle2{
+}
+.leftbutton{
+}
+
+
+
+
