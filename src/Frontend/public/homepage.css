@@ -1,10 +1,17 @@
+body{
+    background-color: #f1f1f1;
+}
+
+
+
+
 .line{
     position:fixed;
     height: 12vh;
     top: 0%;
     left: 0%;
     width: 100%;
-    background-color: #E2E2E2;
+    background-color: #c3c4ca;
 }
 .user{
     position: fixed;
@@ -23,11 +30,13 @@
 .body{
     margin: 17vh 14vw 0vh 14vw;
     align-items: center;
+    
 }
 .body .item{
-    width: 100wh;
+    width: 20vw;
     height: 20vh;
-    background-color: #111;
+    border-radius: 2vh;
+    background-color: #c3c4ca;
 }
 .smallrectangle1{
 }
