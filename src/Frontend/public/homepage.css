@@ -32,27 +32,50 @@ body{
     align-items: center;
     
 }
-.body .item{
+.smallrectangle .item{
     width: 20vw;
     height: 20vh;
     border-radius: 2vh;
     background-color: #c3c4ca;
+    margin: 0.3vw;
 }
-.smallrectangle1{
+.smallrectangle{
+    display: flex;
+    margin-top: 20vh;
+    margin-bottom: 8vh;
+    
 }
-.smallrectangle2{
+
+.body2 .bigItem{
+    width: 38vw;
+    height: 40vh;
+    background-color: #c3c4ca;
+    margin: auto;
+    margin-top: 3vh;
+    border-radius: 2vh;
+    text-align: center;
 }
-.smallrectangle3{
-}
-.smallrectangle4{
-}
-.bigrectangle1{
-}
-.bigrectangle2{
-}
-.leftbutton{
+.body2{
+    display: flex;
+    
 }
 
 
 
+.circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #c3c4ca;
+    text-align: center;
+    margin-top: 45px;
+}
 
+.circle:hover{
+    background-color: #a0a0a4;
+}
+
+
+.circle .fas{
+    margin-top: 2vh;
+}
