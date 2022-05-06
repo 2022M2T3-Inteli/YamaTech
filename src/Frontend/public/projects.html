@@ -15,10 +15,10 @@
 </head>
 
 <body>
-    <div>
+    <div class="g-0">
         <div class="height row g-0">
-            <div class="height col-1">
-                <div class="height navbar-expand fundo-cinza">
+            <div class="height col-1 g-0">
+                <div class="height g-0">
                     <!-- navigation bar -->
                     <div class="navigation">
                         <div class="logo">
@@ -73,6 +73,19 @@
                         <ion-icon name="menu" class="open"></ion-icon>
                         <ion-icon name="close" class="close"></ion-icon>
                     </div>
+
+                    <div class="toggle-1">
+                        <div class="row g-0">
+                            <div class="offset-11 col-1 g-0">
+                                <div style="padding-top: 0.5em; padding-left: 3em;">
+                                    <a href="#">
+                                        <img class="login-icon" src="./img/user_image.png">
+                                    </a>
+                                <p style="opacity: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam ipsum culpa atque ea vel! Amet sequi architecto velit nemo dignissimos numquam nisi laboriosam veritatis? Labore accusantium eaque quibusdam harum illo reprehenderit ab quos nulla voluptatem adipisci eius, omnis fuga consequuntur deserunt fugit dolore ex dolorum eligendi at facilis eum sint? Commodi, similique! Quidem, ratione recusandae mollitia, quisquam possimus, dolore aperiam voluptatum ut delectus tempore reiciendis. Voluptate provident, neque pariatur harum eos sapiente non in nihil rerum enim adipisci sit officiis ratione, quibusdam assumenda facere molestiae minima excepturi, quia voluptates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -106,21 +119,13 @@
                 </div>
                 <!-- end of navigation bar -->
             </div>
-            <div class="height col-11">
-                <div class="row g-0 fundo-azul" style="height: 10%;">
-                    <div class="offset-11 col-1 fundo-cinza">
-                        B
-                    </div>
-                </div>
-                <div class="row g-0 fundo-azul-claro" style="height: 5%;">
-                    C
-                </div>
+            <div class="height col-11 g-0">
+                <div class="row g-0" style="height: 10%; background: var(--light-main-color);"></div>
+                <div class="row g-0" style="height: 5%;"></div>
                 <div class="row g-0" style="height: 70%;">
-                    <div class="col-1 fundo-amarelo">
-                        D.1
-                    </div>
-                    <div class="col-10 fundo-cinza">
-                        <table id="table" data-height="460">
+                    <div class="col-1"></div>
+                    <div class="col-10 g-0">
+                        <table class="table table-stripped" id="table" data-height="460">
                             <thead>
                                 <tr>
                                     <th data-field="id">ID do Projeto</th>
@@ -130,26 +135,23 @@
                             </thead>
                         </table>
                     </div>
-                    <div class="col-1 fundo-azul">
-                        D.3
-                    </div>
+                    <div class="col-1"></div>
                 </div>
                 <div class="row g-0" style="height: 15%;">
-                    <div class="col-5 fundo-pink">
-                        E.1
+                    <div class="col-5"></div>
+                    <div class="col-2">
+                        <div class="row" style="height: 30px;"></div>
+                        <button type="button" class="btn btn-primary btn-lg">Incluir</button>
                     </div>
-                    <div class="col-2 fundo-azul-claro">
-                        E.2
+                    <div class="col-2">
+                        <div class="row" style="height: 30px;"></div>
+                        <button type="button" class="btn btn-primary btn-lg">Editar</button>
                     </div>
-                    <div class="col-2 fundo-amarelo">
-                        E.3
+                    <div class="col-2">
+                        <div class="row" style="height: 30px;"></div>
+                        <button type="button" class="btn btn-primary btn-lg">Excluir</button>
                     </div>
-                    <div class="col-2 fundo-pink">
-                        E.4
-                    </div>
-                    <div class="col-1 fundo-cinza">
-                        E.5
-                    </div>
+                    <div class="col-1"></div>
                 </div>
             </div>
         </div>        

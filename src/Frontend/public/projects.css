@@ -20,7 +20,6 @@
 
 body {
     min-height: 100vh;
-
 }
 
 .logo {
@@ -55,6 +54,11 @@ body {
     display: block;
 }
 
+.login-icon {
+    width: 5em;
+    height: 5em;
+}
+
 .navigation {
     position: fixed;
     top: 0;
@@ -66,8 +70,9 @@ body {
     box-sizing: initial;
     transition: 0.5s;
     overflow-x: hidden;
-    z-index: 1;
+    z-index: 2;
     max-height: vh;
+    align-content: right;
 }
 
 .navigation.active {
@@ -178,7 +183,7 @@ body {
 
 .toggle {
     position: fixed;
-    top: 1.5em;
+    top: 1.3em;
     left: 6em;
     width: 50px;
     height: 50px;
@@ -189,6 +194,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    z-index: 2;
 }
 
 .toggle.active {
@@ -209,6 +215,15 @@ body {
 
 .toggle ion-icon.close, .toggle.active ion-icon.open {
     display: none;
+}
+
+.toggle-1 {
+    position: fixed;
+    width: 100vw;
+    height: 10vh;
+    background: var(--light-main-color);
+    display: flex;
+    z-index: 1;
 }
 
 .fundo-azul {
