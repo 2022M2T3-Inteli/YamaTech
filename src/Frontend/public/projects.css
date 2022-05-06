@@ -1,65 +1,233 @@
-.backgroundgray{
-    background-color: gray;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --main-color: #636464;
+    --light-main-color: #c3c4ca;
+    --dark-main-color: #5c5b5d;
+    --secondary-color: #0729d8;
+    --light-secondary-color: #7096d1;
+    --terciary-color: white;
 }
-td{
-    border: 2px solid black;
-    color: white;
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+}
+
+.logo {
+    padding-top: 1em;
+    border-radius: 50%;
+    display: block;
+}
+
+.small-logo {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+
+.small-logo.active {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    display: none;
+}
+
+.large-logo {
+    display: none;
+}
+
+.large-logo.active {
+    align-content: center;
+    width: 100%;
+    padding-right: 1.5em;
+    padding-left: 0.5em;
+    height: 4em;
+    display: block;
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--secondary-color);
+    border-left: 0.5em solid var(--secondary-color);
+    width: 4.5em;
+    box-sizing: initial;
+    transition: 0.5s;
+    overflow-x: hidden;
+    z-index: 1;
+}
+
+.navigation.active {
+    width: 18em;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 8em;
+    left: 0;
+    width: 100%;
+    padding-left: 0.5em;
+    padding-top: 2.5em;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 1.25em;
+    border-bottom-left-radius: 1.25em;
+    margin-bottom: 3em;
+}
+
+.navigation ul li.active {
+    background: var(--light-main-color);
+}
+
+.navigation ul li b:nth-child(1) {
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 100%;
+    background: var(--light-main-color);
+    display: none;
+}
+
+.navigation ul li b:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    border-bottom-right-radius: 20px;
+}
+
+.navigation ul li b:nth-child(2) {
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    width: 100%;
+    background: var(--light-main-color);
+    display: none;
+}
+
+.navigation ul li b:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    border-top-right-radius: 20px;
+}
+
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2) {
+    display: block;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--terciary-color);
+}
+
+.navigation ul li.active a {
+    color: var(--main-color);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
     text-align: center;
 }
-th{
-    color: white;
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.5em;
 }
-.backgroundred{
-    background-color:gray;
-    color: white;
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: normal;
+}
+
+.toggle {
+    position: fixed;
+    top: 1.5em;
+    left: 6em;
+    width: 50px;
+    height: 50px;
+    background: var(--light-secondary-color);
     border-radius: 10px;
-    border-style: none;
     cursor: pointer;
-    padding: 8px;
-    margin: 2px;
-    margin-top: 15px;
-    
-}
-.backgroundgreen{
-    background-color:gray;
-    color:white;
-    border-radius: 10px;
-    border-style: none;
-    cursor: pointer;
-    padding: 8px;
-}
-.backgroundblue{
-    background-color:gray ;
-    color: white;
-    border-radius: 10px;
-    border-style: none;
-    cursor: pointer;
-    padding: 8px;
-    
-}
-table{
-    width: 60%;
-    height: 500px;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
-.backgroundblue1{
-    background-color:  #072ad8;
+
+.toggle.active {
+    left: 20em;
+    transition: 0.5s;
 }
-.backgroundblue2{
-    background-color:#072ad8d5;
+
+.toggle ion-icon {
+    position: absolute;
+    color: var(--terciary-color);
+    font-size: 34px;
+    display: none;
 }
-.backgroundblue3{
-    background-color: #072ad8b4;
+
+.toggle ion-icon.open, .toggle.active ion-icon.close {
+    display: block;
 }
-.backgroundblue4{
-    background-color: #072ad893;
+
+.toggle ion-icon.close, .toggle.active ion-icon.open {
+    display: none;
 }
-.backgroundblue5{
-    background-color: #072ad870;
+
+.fundo-azul {
+    background: blue;
 }
-.backgroundblue6{
-    background-color: #2607d860;
+
+.fundo-pink {
+    background: pink;
 }
-.backgroundblue7{
-    background-color: #072ad855;
+
+.fundo-cinza {
+    background: grey;
+}
+
+.fundo-azul-claro {
+    background: lightblue;
+}
+
+.fundo-amarelo {
+    background: yellow;
+}
+
+.height {
+    height: 100vh;
 }
