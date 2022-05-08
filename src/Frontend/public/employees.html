@@ -1,72 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <!-- Comentários-->
-    <head>
-        <link rel="stylesheet" href="employees.css">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-    </head>
-    <body>
-    <h1>Tabela de Alocação dos Funcionários</h1>
-    <table>
-         <tr class="background">
-            <input type="text" placeholder="Nome">
-                <th class="cel_style text_color"> Nome Completo</th>
-                <th class="cel_style text_color"> Cargo</th>
-                <th class="cel_style text_color"> Especialidade</th>
-                <th class="cel_style text_color"> Horas Disponíveis</th>
-                <th class="cel_style text_color">Projeto Alocado</th>
-                <img src="img/user_image.png" width="50" alt="">
-         </tr>
-             
-         <tr>
-            <th class="blue_background cel_style text_color"> Funcionário 1</th>
-                <td class="cel_style">Ux Designer</td>
-                <td class="cel_style">80 h</td>
-                <td class="cel_style">30 h</td>
-                <td class="cel_style">Funcionário 5</td>
-         </tr>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
-        <tr>
-            <th class="blue_background cel_style text_color" >Funcionário 2</th>
-            <td class="cel_style">Engenheiro de dados</td>
-            <td class="cel_style">30 h</td>
-            <td class="cel_style">Funcionário 4</td>
-            <td class="cel_style">Funcionário 5</td>
-        </tr>
-        
-        <tr>
-            <th class="cel_style blue_background text_color">Funcionário 3</th>
-            <td class="cel_style">Analista de sistemas</td>
-            <td class="cel_style">20 h</td>
-            <td class="cel_style">Funcionário 4</td>
-            <td class="cel_style">ahah</td>
-        </tr>
-        <tr>
-            <th class="cel_style blue_background text_color">Funcionário 4</th>
-            <td class="cel_style">Dev Full Stack</td>
-            <td class="cel_style">40 h</td>
-            <td class="cel_style">Funcionário 4</td>
-            <td class="cel_style">Funcionário 5</td>
-        </tr>
-        <tr>
-            <th class="cel_style blue_background text_color"> Funcionário 5</th>
-            <td class="cel_style">Master Screwed</td>
-            <td class="cel_style">10 h</td>
-            <td class="cel_style">Funcionário 4</td>
-            <td class="cel_style">Funcionário 5</td>
-        </tr>
-        <tr>
-            <th class="cel_style blue_background text_color">Funcionário 6</th>
-            <td class="cel_style">Engenheiro de Software</td>
-            <td class="cel_style">15 h</td>
-            <td class="cel_style">Funcionário 4</td>
-            <td class="cel_style">Funcionário 5</td>
-        </tr>
-    </table>
-        <button class="background_gray button_style" type="button">Editar</button>
-        <button class="background_red button_style"type="button">Excluir Funcionário</button>
-        <button class="background_green button_style"type="button">Incluir Funcionário</button>
-        <img class="user_imag" src ="assets/user_image.png">
-    </body>
+    <link rel="stylesheet" href="projects_employees.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script src="employees.js"></script>
+</head>
+
+<body>
+    <div class="g-0">
+        <div class="height row g-0">
+            <div class="height col-1 g-0">
+                <div class="height g-0">
+                    <!-- navigation bar -->
+                    <div class="navigation">
+                        <div class="logo">
+                            <img class="small-logo" src="https://toppng.com/uploads/preview/yamaha-tuning-fork-logo-vector-yamaha-logo-vector-11563174749khhubpdvqv.png">
+                            <img class="large-logo" src="./img/yamaha-logo-red.png">
+                        </div>
+                        <ul>
+                            <li class="list active">
+                                <b></b>
+                                <b></b>
+                                <a href="./home.html">
+                                    <span class="icon">
+                                        <ion-icon name="home"></ion-icon>
+                                    </span>
+                                    <span class="title">Home</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <b></b>
+                                <b></b>
+                                <a href="./dashboard.html">
+                                    <span class="icon">
+                                        <ion-icon name="grid"></ion-icon>
+                                    </span>
+                                    <span class="title">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <b></b>
+                                <b></b>
+                                <a href="./employees.html">
+                                    <span class="icon">
+                                        <ion-icon name="people"></ion-icon>
+                                    </span>
+                                    <span class="title">Funcionários</span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <b></b>
+                                <b></b>
+                                <a href="./projects.html">
+                                    <span class="icon">
+                                        <ion-icon name="construct"></ion-icon>
+                                    </span>
+                                    <span class="title">Projetos</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+                
+                    <div class="toggle">
+                        <ion-icon name="menu" class="open"></ion-icon>
+                        <ion-icon name="close" class="close"></ion-icon>
+                    </div>
+
+                    <div class="toggle-1">
+                        <div class="row g-0">
+                            <div class="offset-11 col-1 g-0">
+                                <div style="padding-top: 0.5em; padding-left: 3em;">
+                                    <a href="#">
+                                        <img class="login-icon" src="./img/user_image.png">
+                                    </a>
+                                <p style="opacity: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam ipsum culpa atque ea vel! Amet sequi architecto velit nemo dignissimos numquam nisi laboriosam veritatis? Labore accusantium eaque quibusdam harum illo reprehenderit ab quos nulla voluptatem adipisci eius, omnis fuga consequuntur deserunt fugit dolore ex dolorum eligendi at facilis eum sint? Commodi, similique! Quidem, ratione recusandae mollitia, quisquam possimus, dolore aperiam voluptatum ut delectus tempore reiciendis. Voluptate provident, neque pariatur harum eos sapiente non in nihil rerum enim adipisci sit officiis ratione, quibusdam assumenda facere molestiae minima excepturi, quia voluptates.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                
+                    <script>
+                        //toggles sidebar
+                        let menuToggle = document.querySelector(".toggle");
+                        let navigation = document.querySelector(".navigation");
+                        let smallLogo = document.querySelector(".small-logo");
+                        let largeLogo = document.querySelector(".large-logo");
+                        menuToggle.onclick = function() {
+                            menuToggle.classList.toggle("active");
+                            navigation.classList.toggle("active");
+                            smallLogo.classList.toggle("active");
+                            largeLogo.classList.toggle("active");
+                        }
+                
+                        //handles list's active class
+                        let list = document.querySelectorAll(".list");
+                
+                        for (let i=0; i<list.length; i++) {
+                            list[i].onclick = function() {
+                                let j=0;
+                                while(j<list.length) {
+                                    list[j++].className = "list";
+                                }
+                                list[i].className = "list active ";
+                            }
+                        }
+                    </script>
+                </div>
+                <!-- end of navigation bar -->
+            </div>
+            <div class="height col-11 g-0">
+                <div class="row g-0" style="height: 10%; background: var(--light-main-color);"></div>
+                <div class="row g-0" style="height: 5%;"></div>
+                <div class="row g-0" style="height: 70%;">
+                    <div class="col-1"></div>
+                    <div class="col-10 g-0">
+                        <table class="table table-stripped" id="table" data-height="460">
+                            <thead>
+                                <tr>
+                                    <th data-field="id">ID do Funcionário</th>
+                                    <th data-field="name">Nome do Funcionário</th>
+                                    <th data-field="etc">etc</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row g-0" style="height: 15%;">
+                    <div class="col-5"></div>
+                    <div class="col-2">
+                        <div class="row" style="height: 30px;"></div>
+                        <button type="button" class="btn btn-primary btn-lg">Incluir</button>
+                    </div>
+                    <div class="col-2">
+                        <div class="row" style="height: 30px;"></div>
+                        <button type="button" class="btn btn-primary btn-lg">Editar</button>
+                    </div>
+                    <div class="col-2">
+                        <div class="row" style="height: 30px;"></div>
+                        <button type="button" class="btn btn-primary btn-lg">Excluir</button>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>        
+    </div>
+</body>
 </html>

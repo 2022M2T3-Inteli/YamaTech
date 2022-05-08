@@ -226,26 +226,6 @@ body {
     z-index: 1;
 }
 
-.fundo-azul {
-    background: blue;
-}
-
-.fundo-pink {
-    background: pink;
-}
-
-.fundo-cinza {
-    background: grey;
-}
-
-.fundo-azul-claro {
-    background: lightblue;
-}
-
-.fundo-amarelo {
-    background: yellow;
-}
-
 .height {
     height: 100vh;
 }

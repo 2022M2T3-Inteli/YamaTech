@@ -1,55 +1,47 @@
-/*-- Login --*/
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
 }
-.login-cover{
-    width: 88vh;
+
+.login-cover {
+    width: 45vw;
     height: 100vh;
     background-color: #000000;
     float: left;
 }
-.login-cover .logo{
-    width: 220px;
-    height: 50px;
-    margin: 5vh 0 0 30%;
+
+.login-cover video {
+    position: fixed;
+    top: 20%;
+    width: 40%;
+    height: 40%;
 }
-.login-cover video{
-    width: 100%;
-    height: 100%;
-}
-.login-cover .revs{
-    width: 28%;
-    margin-top: -15px;
-    margin-left: 40%;
-}
+
 .login-form {
-    margin-right: 39vh;
+    position: fixed;
+    left: 60%;
+    top: 10%;
     margin-top: 16vh;
-    width: 350px;
-    align-items: center;
-    padding: 10px;
     display: grid;
-    border-radius: 10px;
-    justify-content: space-around;
-    float: right;
 }
+
 .login-form h1{
     font-family: 'Inter', sans-serif;
     text-align: center;
     color: #333;
-    margin-top: 40px;
+    
     font-size: 40px;
 }
+
 .login-form span{
     height: 1px;
     width: 350px;
     background-color: #333;
     margin: 20px 0 20px 0;
 }
+
 .login-form input{
     height: 45px;
     width: 350px;
@@ -60,22 +52,30 @@
     font-family: 'Inter', sans-serif;
     margin: 2px solid #333;
     background-color: rgba(13, 162, 254, 0.409);
-    color: rgb(255, 255, 255);
-    
+    color: rgb(255, 255, 255);   
 }
+
+.login-form a {
+    padding: 15px;
+    border-radius: 10px;
+    border-style: none;
+    font-family: 'Inter', sans-serif;
+    width: 160px;
+    margin-left: 23%;
+    margin-top: 5%;
+}
+
 .login-form button{
     padding: 15px;
     border-radius: 10px;
     border-style: none;
     font-family: 'Inter', sans-serif;
     width: 160px;
-    margin: 40px auto 20px auto;
     cursor: pointer;
     background-color: #094ae3;
     color: #fff;
 }
+
 .login-form button:hover{ 
     background-color: #2465ff;
-    
-
 }
