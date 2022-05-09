@@ -20,117 +20,112 @@
             <div class="height col-1 g-0">
                 <div class="height g-0">
                     <!-- navigation bar -->
-                    <div class="navigation">
-                        <div class="logo">
-                            <img class="small-logo" src="https://toppng.com/uploads/preview/yamaha-tuning-fork-logo-vector-yamaha-logo-vector-11563174749khhubpdvqv.png">
-                            <img class="large-logo" src="./img/yamaha-logo-red.png">
-                        </div>
-                        <ul>
-                            <li class="list active">
-                                <b></b>
-                                <b></b>
-                                <a href="./home.html">
-                                    <span class="icon">
-                                        <ion-icon name="home"></ion-icon>
-                                    </span>
-                                    <span class="title">Home</span>
-                                </a>
-                            </li>
-                            <li class="list">
-                                <b></b>
-                                <b></b>
-                                <a href="./dashboard.html">
-                                    <span class="icon">
-                                        <ion-icon name="grid"></ion-icon>
-                                    </span>
-                                    <span class="title">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="list">
-                                <b></b>
-                                <b></b>
-                                <a href="./employees.html">
-                                    <span class="icon">
-                                        <ion-icon name="people"></ion-icon>
-                                    </span>
-                                    <span class="title">Funcionários</span>
-                                </a>
-                            </li>
-                            <li class="list">
-                                <b></b>
-                                <b></b>
-                                <a href="./projects.html">
-                                    <span class="icon">
-                                        <ion-icon name="construct"></ion-icon>
-                                    </span>
-                                    <span class="title">Projetos</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div> 
-                
-                    <div class="toggle">
-                        <ion-icon name="menu" class="open"></ion-icon>
-                        <ion-icon name="close" class="close"></ion-icon>
-                    </div>
+                    <div class="height navbar-expand fundo-cinza">
 
-                    <div class="toggle-1">
-                        <div class="row g-0">
-                            <div class="offset-11 col-1 g-0">
-                                <div style="padding-top: 0.5em; padding-left: 3em;">
-                                    <a href="#">
-                                        <img class="login-icon" src="./img/user_image.png">
-                                    </a>
-                                <p style="opacity: 0;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo totam ipsum culpa atque ea vel! Amet sequi architecto velit nemo dignissimos numquam nisi laboriosam veritatis? Labore accusantium eaque quibusdam harum illo reprehenderit ab quos nulla voluptatem adipisci eius, omnis fuga consequuntur deserunt fugit dolore ex dolorum eligendi at facilis eum sint? Commodi, similique! Quidem, ratione recusandae mollitia, quisquam possimus, dolore aperiam voluptatum ut delectus tempore reiciendis. Voluptate provident, neque pariatur harum eos sapiente non in nihil rerum enim adipisci sit officiis ratione, quibusdam assumenda facere molestiae minima excepturi, quia voluptates.</p>
-                                </div>
+                        <!-- navigation bar -->
+                        <div class="navigation">
+                            <div class="logo">
+                                <img class="small-logo" src="img/yamahaa.png">
+                                <p class="large-logo">YAMAHA</p>
                             </div>
-                        </div>
-                    </div>
+                            <ul>
+                                <li class="list active">
+                                    <b></b>
+                                    <b></b>
+                                    <a href="#">
+                                        <span class="icon">
+                                            <ion-icon name="home"></ion-icon>
+                                        </span>
+                                        <span class="title">Home</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <b></b>
+                                    <b></b>
+                                    <a href="dashboard.html">
+                                        <span class="icon">
+                                            <ion-icon name="grid"></ion-icon>
+                                        </span>
+                                        <span class="title">Dashboard</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <b></b>
+                                    <b></b>
+                                    <a href="employees.html">
+                                        <span class="icon">
+                                            <ion-icon name="people"></ion-icon>
+                                        </span>
+                                        <span class="title">Funcionários</span>
+                                    </a>
+                                </li>
+                                <li class="list">
+                                    <b></b>
+                                    <b></b>
+                                    <a href="projects.html">
+                                        <span class="icon">
+                                            <ion-icon name="construct"></ion-icon>
+                                        </span>
+                                        <span class="title">Projetos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> 
+    
+                        <!-- Nav Bar-->
                     
-                    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-                    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-                
-                    <script>
-                        //toggles sidebar
-                        let menuToggle = document.querySelector(".toggle");
-                        let navigation = document.querySelector(".navigation");
-                        let smallLogo = document.querySelector(".small-logo");
-                        let largeLogo = document.querySelector(".large-logo");
-                        menuToggle.onclick = function() {
-                            menuToggle.classList.toggle("active");
-                            navigation.classList.toggle("active");
-                            smallLogo.classList.toggle("active");
-                            largeLogo.classList.toggle("active");
-                        }
-                
-                        //handles list's active class
-                        let list = document.querySelectorAll(".list");
-                
-                        for (let i=0; i<list.length; i++) {
-                            list[i].onclick = function() {
-                                let j=0;
-                                while(j<list.length) {
-                                    list[j++].className = "list";
-                                }
-                                list[i].className = "list active ";
+                        <div class="toggle">
+                            <ion-icon name="menu" class="open"></ion-icon>
+                            <ion-icon name="close" class="close"></ion-icon>
+                        </div>
+                        
+                        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+                        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                    
+                        <script>
+                            //toggles sidebar
+                            let menuToggle = document.querySelector(".toggle");
+                            let navigation = document.querySelector(".navigation");
+                            let largeLogo = document.querySelector(".large-logo");
+                            menuToggle.onclick = function() {
+                                menuToggle.classList.toggle("active");
+                                navigation.classList.toggle("active");
+                                largeLogo.classList.toggle("active");
                             }
-                        }
-                    </script>
+                    
+                            //handles list's active class
+                            let list = document.querySelectorAll(".list");
+                    
+                            for (let i=0; i<list.length; i++) {
+                                list[i].onclick = function() {
+                                    let j=0;
+                                    while(j<list.length) {
+                                        list[j++].className = "list";
+                                    }
+                                    list[i].className = "list active ";
+                                }
+                            }
+                        </script>
+                    </div>
+                    <!-- end of navigation bar -->
+    
                 </div>
                 <!-- end of navigation bar -->
             </div>
             <div class="height col-11 g-0">
-                <div class="row g-0" style="height: 10%; background: var(--light-main-color);"></div>
-                <div class="row g-0" style="height: 5%;"></div>
+               
+                <div class="nav-top"></div>
                 <div class="row g-0" style="height: 70%;">
                     <div class="col-1"></div>
                     <div class="col-10 g-0">
                         <table class="table table-stripped" id="table" data-height="460">
                             <thead>
                                 <tr>
-                                    <th data-field="id">ID do Funcionário</th>
-                                    <th data-field="name">Nome do Funcionário</th>
-                                    <th data-field="etc">etc</th>
+                                    <th data-field="name">Nome Completo</th>
+                                    <th data-field="office">Cargo</th>
+                                    <th data-field="specialty">Especialidade</th>
+                                    <th data-field="hours">Horas Disponíveis</th>
+                                    <th data-field="project">Projeto Alocado</th>
                                 </tr>
                             </thead>
                         </table>
@@ -156,5 +151,23 @@
             </div>
         </div>        
     </div>
+
+
+    <!-- MODAL -->
+    <script type="text/javascript">
+        function abrirModal() {
+            document.getElementById('modal').style.top = "0";
+        }
+        function fecharModal() {
+            document.getElementById('modal').style.top = "-100%";
+        }
+    </script>
+    <body>
+        <button class="open-modal" onclick="abrirModal()">Abrir modal</button>
+        <div class="bg-modal" id="modal">
+            <div class="modal">
+                <span class="close" onclick="fecharModal()">&times;</span>
+            </div>
+        </div>
 </body>
 </html>

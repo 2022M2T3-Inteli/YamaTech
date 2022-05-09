@@ -22,10 +22,10 @@ body {
     min-height: 100vh;
 }
 
+
 .logo {
     padding-top: 1em;
-    border-radius: 50%;
-    display: block;
+    display: flex;
 }
 
 .small-logo {
@@ -34,29 +34,20 @@ body {
     border-radius: 50%;
 }
 
-.small-logo.active {
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    display: none;
-}
 
 .large-logo {
     display: none;
+   
 }
 
 .large-logo.active {
     align-content: center;
-    width: 100%;
     padding-right: 1.5em;
     padding-left: 0.5em;
-    height: 4em;
+    color: #fff;
     display: block;
-}
-
-.login-icon {
-    width: 5em;
-    height: 5em;
+    font-size: 30px;
+    margin-top: 1vh;
 }
 
 .navigation {
@@ -70,9 +61,8 @@ body {
     box-sizing: initial;
     transition: 0.5s;
     overflow-x: hidden;
-    z-index: 2;
-    max-height: vh;
-    align-content: right;
+    z-index: 1;
+    max-height: 100vh;
 }
 
 .navigation.active {
@@ -183,7 +173,7 @@ body {
 
 .toggle {
     position: fixed;
-    top: 1.3em;
+    top: 1.5em;
     left: 6em;
     width: 50px;
     height: 50px;
@@ -194,7 +184,6 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    z-index: 2;
 }
 
 .toggle.active {
@@ -229,3 +218,115 @@ body {
 .height {
     height: 100vh;
 }
+
+.row g-0{
+    width: 100vw;
+    height: 10vh;
+    background-color: #333;
+}
+
+.nav-top{
+    width: 100vw;
+    height: 10vh;
+    margin-left: -16vh;
+    margin-bottom: 20px;
+    background-color: #333;
+}
+
+.table tr th{
+    background-color: #333;
+    color: #fff;
+    
+}
+
+.table tr:nth-child(1){
+    background-color:  blue;
+    color: #fff;
+    height: 5px;
+    
+}
+.table tr:nth-child(2){
+    background-color:rgba(0, 0, 255, 0.941);
+    color: #fff;
+    height: 5px;
+    
+}
+.table tr:nth-child(3){
+    background-color:rgba(0, 0, 255, 0.913);
+    color: #fff;
+    height: 5px;
+    
+}
+.table tr:nth-child(4){
+    background-color:rgba(0, 0, 255, 0.845);
+    color: #fff;
+    height: 5px;
+}
+    .table tr:nth-child(5){
+        background-color:rgba(0, 0, 255, 0.799);
+        color: #fff;
+        height: 5px;
+    }
+
+    .table tr:nth-child(6){
+        background-color:rgba(0, 0, 255, 0.758);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(7){
+        background-color:rgba(0, 0, 255, 0.705);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(8){
+        background-color:rgba(0, 0, 255, 0.685);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(9){
+        background-color:rgba(0, 0, 255, 0.66);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(10){
+        background-color:rgba(0, 0, 255, 0.605);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(11){
+        background-color:rgba(0, 0, 255, 0.678);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(12){
+        background-color:rgba(0, 0, 255, 0.614);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(13){
+        background-color:rgba(0, 0, 255, 0.566);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(14){
+        background-color:rgba(0, 0, 255, 0.523);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(15){
+        background-color:rgba(0, 0, 255, 0.498);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(16){
+        background-color:rgba(0, 0, 255, 0.429);
+        color: #fff;
+        height: 5px;
+    }
+    .table tr:nth-child(17){
+        background-color:rgba(0, 0, 255, 0.326);
+        color: #fff;
+        height: 5px;
+    }
+
+
