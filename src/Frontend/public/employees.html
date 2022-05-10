@@ -136,7 +136,7 @@
                     <div class="col-5"></div>
                     <div class="col-2">
                         <div class="row" style="height: 30px;"></div>
-                        <button type="button" class="btn btn-primary btn-lg">Incluir</button>
+                        <button type="button" class="btn btn-primary btn-lg include">Incluir</button>
                     </div>
                     <div class="col-2">
                         <div class="row" style="height: 30px;"></div>
@@ -152,22 +152,30 @@
         </div>        
     </div>
 
-
-    <!-- MODAL -->
-    <script type="text/javascript">
-        function abrirModal() {
-            document.getElementById('modal').style.top = "0";
-        }
-        function fecharModal() {
-            document.getElementById('modal').style.top = "-100%";
-        }
-    </script>
-    <body>
-        <button class="open-modal" onclick="abrirModal()">Abrir modal</button>
-        <div class="bg-modal" id="modal">
-            <div class="modal">
-                <span class="close" onclick="fecharModal()">&times;</span>
-            </div>
+      <!-- MODAL -->
+      <div class="modal-bg" id="modal">
+        <div class="modal">
+            <span class="close-btn">&times;</span>
         </div>
+    </div>
+
+    <script>
+        let modalToggle = document.querySelector(".include");
+        let modal = document.querySelector(".modal-bg");
+
+        let closeModal = document.querySelector(".close-btn");
+        let close = document.querySelector(".modal-bg");
+
+        modalToggle.onclick = function() {
+            modal.classList.add("modal-show");
+        }
+
+        closeModal.onclick = function() {
+            modal.classList.remove("modal-show");
+        }
+
+    </script>
+  
+    
 </body>
 </html>
