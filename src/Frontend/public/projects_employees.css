@@ -233,6 +233,10 @@ body {
     background-color: #333;
 }
 
+.table tr th{
+    background-color: #333;
+    color: #fff;
+}
 
 .modal-bg{
     background-color: rgba(0, 0, 0, 0.692);
@@ -245,26 +249,23 @@ body {
     display: none;
 }
 .modal-show{
-    background-color: rgba(0, 0, 0, 0.692);
-    height: 100vh;
-    width: 100vw;
-    margin-top: -100vh;
-    z-index: 2;
-    position: absolute;
 
     display: block;
 }
 .modal-bg .modal{
     height: 500px;
-    width: 1000px;
+    width: 850px;
     margin: auto;
     background-color: #fff;
     z-index: 3;
     display: block;
+    border-radius: 10px;
+    box-shadow: 5px 6px 20px 10px #00000054;
 }
 .close-btn{
     font-size: 40px;
     float: right;
+    margin-right: 10px;
 }
 .close-btn:hover{
     color: #0729d8;
@@ -272,6 +273,28 @@ body {
 }
     
     
-    
-    
+.modal-forms{
+    margin: 20px ;
+    display: flex;
+    height: 40px;
+    width: 700px;
+}
+
+.modal-button{
+    margin-left: 20px;
+    height: 60px;
+    width: 100px;
+    background-color: #2779f4;
+    color: #fff;
+}
+.modal-button:hover{
+    background-color: #0d213f;
+    color: #fff;
+}
+.title{
+    margin-left: 20px;
+}
+.title span{
+    color: #7096d1;
+}
     

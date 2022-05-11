@@ -23,8 +23,7 @@ body {
 
 .logo {
     padding-top: 1em;
-    border-radius: 50%;
-    display: block;
+    display: flex;
 }
 
 .small-logo {
@@ -33,24 +32,20 @@ body {
     border-radius: 50%;
 }
 
-.small-logo.active {
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    display: none;
-}
 
 .large-logo {
     display: none;
+   
 }
 
 .large-logo.active {
     align-content: center;
-    width: 100%;
     padding-right: 1.5em;
     padding-left: 0.5em;
-    height: 4em;
+    color: #fff;
     display: block;
+    font-size: 30px;
+    margin-top: 1vh;
 }
 
 .navigation {
@@ -64,6 +59,8 @@ body {
     box-sizing: initial;
     transition: 0.5s;
     overflow-x: hidden;
+    z-index: 1;
+    max-height: 100vh;
 }
 
 .navigation.active {
