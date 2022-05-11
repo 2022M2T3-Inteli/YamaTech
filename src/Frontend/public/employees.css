@@ -16,9 +16,22 @@
     box-sizing: border-box;
 }
 
-body {
-    min-height: 100vh;
+.body {
+    height: 100vh;
+    background: var(--light-main-color);
+ }
 
+.height {
+    height: 100vh;
+}
+
+.top-bar {
+    background: var(--dark-main-color);
+}
+
+.user-box {
+    text-align: left;
+    padding-top: 0.5em;
 }
 
 .logo {
@@ -175,7 +188,7 @@ body {
     left: 6em;
     width: 50px;
     height: 50px;
-    background: var(--light-secondary-color);
+    background: var(--dark-main-color);
     border-radius: 10px;
     cursor: pointer;
     display: flex;
@@ -202,4 +215,69 @@ body {
 
 .toggle ion-icon.close, .toggle.active ion-icon.open {
     display: none;
+}
+
+.table tr th{
+    background-color: var(--dark-main-color);
+    color: var(--terciary-color);
+}
+
+.modal-bg{
+    background-color: rgba(0, 0, 0, 0.692);
+    height: 100vh;
+    width: 100vw;
+    margin-top: -100vh;
+    z-index: 2;
+    position: absolute;
+
+    display: none;
+}
+.modal-show{
+
+    display: block;
+}
+.modal-bg .modal{
+    height: 500px;
+    width: 850px;
+    margin: auto;
+    background-color: var(--terciary-color);
+    z-index: 3;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 5px 6px 20px 10px #00000054;
+}
+.close-btn{
+    font-size: 40px;
+    float: right;
+    margin-right: 25px;
+    margin-top: 8px;
+}
+.close-btn:hover{
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+    
+.modal-forms{
+    margin: 20px ;
+    display: flex;
+    height: 40px;
+    width: 700px;
+}
+
+.modal-button{
+    margin-left: 20px;
+    height: 60px;
+    width: 100px;
+    background-color: var(--light-secondary-color);
+    color: var(--terciary-color);
+}
+.modal-button:hover{
+    background-color: var(--secondary-color);
+    color: var(--terciary-color);
+}
+.title{
+    margin-left: 20px;
+}
+.title span{
+    color: var(--light-secondary-color);
 }
