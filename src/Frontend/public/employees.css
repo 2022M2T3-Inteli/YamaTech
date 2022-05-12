@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@font-face { 
+    font-family: 'slimsans';
+    src: url('font/SlimSansSerif-Bold.ttf');
+    src: local('slimsans'), local('slimsans'), url('font/SlimSansSerif-Bold.ttf') format('truetype');
+ }
 
 :root {
     --main-color: #636464;
@@ -48,17 +53,16 @@
 
 .large-logo {
     display: none;
-   
+    font-family: 'slimsans';
 }
 
 .large-logo.active {
     align-content: center;
     padding-right: 1.5em;
-    padding-left: 0.5em;
+    padding-left: .3em;
     color: #fff;
     display: block;
-    font-size: 30px;
-    margin-top: 1vh;
+    font-size: 42px;
 }
 
 .navigation {
