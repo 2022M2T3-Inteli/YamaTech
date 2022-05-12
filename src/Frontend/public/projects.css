@@ -4,7 +4,7 @@
     src: url('font/SlimSansSerif-Bold.ttf');
     src: local('slimsans'), local('slimsans'), url('font/SlimSansSerif-Bold.ttf') format('truetype');
  }
- 
+
 :root {
     --main-color: #636464;
     --light-main-color: #c3c4ca;
@@ -43,12 +43,17 @@
     padding-top: 1em;
     display: flex;
 }
+.logo img{
+    margin-top: 3px;
+   
+}
 
 .small-logo {
     width: 4em;
     height: 4em;
     border-radius: 50%;
 }
+
 
 .large-logo {
     display: none;
@@ -57,14 +62,15 @@
 
 .large-logo.active {
     align-content: center;
-    padding-right: 1.5em;
-    padding-left: .3em;
     color: #fff;
     display: block;
-    font-size: 42px;
+    font-size: 48px;
+    
 }
-
-
+.logo img.active{
+    margin-left: 10px;
+    margin-right: 18px;
+}
 
 .navigation {
     position: fixed;

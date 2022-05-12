@@ -43,6 +43,10 @@
     padding-top: 1em;
     display: flex;
 }
+.logo img{
+    margin-top: 3px;
+   
+}
 
 .small-logo {
     width: 4em;
@@ -58,12 +62,16 @@
 
 .large-logo.active {
     align-content: center;
-    padding-right: 1.5em;
-    padding-left: .3em;
     color: #fff;
     display: block;
-    font-size: 42px;
+    font-size: 48px;
+    
 }
+.logo img.active{
+    margin-left: 10px;
+    margin-right: 18px;
+}
+
 
 .navigation {
     position: fixed;
