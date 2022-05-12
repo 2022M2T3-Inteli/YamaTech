@@ -238,7 +238,7 @@
 }
 .modal-bg .modal{
     height: 500px;
-    width: 850px;
+    width: 790px;
     margin: auto;
     background-color: var(--terciary-color);
     z-index: 3;
@@ -260,8 +260,11 @@
 .modal-forms{
     margin: 20px ;
     display: flex;
-    height: 40px;
+    height: 30px;
     width: 700px;
+    background-color: rgb(227, 227, 227);
+    border: 1px solid #111;
+    border-radius: 5px;
 }
 
 .modal-button{
@@ -270,6 +273,12 @@
     width: 100px;
     background-color: var(--light-secondary-color);
     color: var(--terciary-color);
+}
+.modal .check{
+    margin-left: 20px;
+}
+.modal label{
+    margin-left: 5px;
 }
 .modal-button:hover{
     background-color: var(--secondary-color);
