@@ -303,3 +303,11 @@
 .title span{
     color: var(--light-secondary-color);
 }
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: #0729d8;
+}
