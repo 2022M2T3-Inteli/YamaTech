@@ -5,18 +5,19 @@
 </p>
 
 # Nome do Projeto
+Elaboração de aplicação para ambiente Web
 
 ## Nome do Grupo
+Yamatech
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Felipe Sampaio</a>, <a href="https://www.linkedin.com/in/victorbarq/">Leandro Custódio</a>, <a href="https://www.linkedin.com/in/victorbarq/">Sarah Ribeiro</a>, <a href="https://www.linkedin.com/in/victorbarq/">Arthur Reis</a>, <a href="https://www.linkedin.com/in/victorbarq/">All</a>,<a href="linkedin"> Alysson Cordeiro</a>,<a href="linkedin"> Marcos Florêncio</a>,<a href="linkedin"> kathlyn Diwan</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
-
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Egon Daxbacher</a>, <a href="https://www.linkedin.com/in/victorbarq/"> Flavio Marques </a>, <a href="https://www.linkedin.com/in/victorbarq/">Fabiana</a>, <a href="https://www.linkedin.com/in/victorbarq/">Henrique</a>, 
 ## Descrição
 
-📜 Descrição curta sobre o que seu projeto faz.
+📜 Objetivos da aplicação para ambiente Web-Yamaha Company
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+O nosso projeto de aplicação para ambiente Web desenvolvido em parceria com a Yamaha tem como objetivo principal realizar a gestão de funcionários de TI nos projetos da empresa.
 <br><br>
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
@@ -24,9 +25,9 @@ Meu projeto é um exemplo de como utilizar o github.
 </p>
 
 
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+💡 O que é o nosso projeto? O que ele faz?
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
+O nosso projeto é um sistema fechado, contendo o login e senha do usuário da empresa, onde o gerentes de projetos conseguirão acessar via browser as informações necessárias para a administração de funcionários de TI. O nosso website conterá duas informações principais para a melhor supervisão desses recursos humanos: Quantidade de funcionários e projetos. Esses fatores se relacionam entre si e o usuário conseguirá visualizar quais profissionais estão nos projetos,desde seu nome até seu cargo e especilaidade por meio de representações gráfica (dashboards e tabelas). O gerente de projetos também poderá colocar conteúdos relacionados ao tempo de duração desses projetos, quantas pessoas estão trabalhando em cada um, além de ser possível visualizar as horas de trabalho de cada profissional, medir a saturação nos trabalhos de TI da empresa. Outro ponto impostante que nosso projeto é capaz de fazer é o dinamismo com que ele acontece. Por exemplo, o gerente de projetos pode transferir funcionários para outros projetos, limitar aqueles profissionais que estão passando das horas legais e muitas otras funcionalidades.
 <br><br>
 May the force be with you!
 <br><br>
