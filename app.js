@@ -1,15 +1,20 @@
 import express from "express";
-import bodyParser from "body-parser";
+import sqlite3 from "sqlite3";
 
 import employeesRoutes from "./routes/employees.js";
 import projectsRoutes from "./routes/projects.js";
 import dashboardRoutes from "./routes/dashboard.js";
 
+
 const app = express();
+const hostname = '127.0.0.1';
 const PORT = 3000;
 
-app.use(bodyParser.json());
 app.use(express.static("src/frontend"));
+
+app.use(express.json());
+
+
 app.use("/employees", employeesRoutes);
 app.use("/projects", projectsRoutes);
 app.use("/dashboard", dashboardRoutes);
