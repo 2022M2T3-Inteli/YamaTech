@@ -73,10 +73,22 @@ export const deleteEmployee = (req, res) => {
 
 export const patchEmployee = (req, res) => {
     res.statusCode = 200;
-	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+	res.setHeader('Access-Control-Allow-Origin', '*');
 
-	var sql = "UPDATE employees SET full_name = '" + req.body.full_name + "' WHERE id = " + req.body.id;
-	var db = new sqlite3.Database("./data/main.db"); // Abre o banco
+    var params = req.params;
+    var body = req.body;
+    var sql;
+
+    if (body.full_name) sql = `UPDATE employees SET full_name="${body.full_name}" WHERE id=${params.id}`;
+    if (body.position) sql = `UPDATE employees SET position="${body.position}" WHERE id=${params.id}`;
+    if (body.legal_hours) sql = `UPDATE employees SET legal_hours="${body.legal_hours}" WHERE id=${params.id}`;
+    if (body.total_hours) sql = `UPDATE employees SET total_hours="${body.total_hours}" WHERE id=${params.id}`;
+    if (body.allocated_hours) sql = `UPDATE employees SET allocated_hours="${body.allocated_hours}" WHERE id=${params.id}`;
+    if (body.outsourced) sql = `UPDATE employees SET outsourced="${body.outsourced}" WHERE id=${params.id}`;
+    if (body.local) sql = `UPDATE employees SET local="${body.local}" WHERE id=${params.id}`;
+    if (body.isActive) sql = `UPDATE employees SET isActive="${body.isActive}" WHERE id=${params.id}`;
+	
+    var db = new sqlite3.Database("./data/main.db"); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
 		    throw err;
