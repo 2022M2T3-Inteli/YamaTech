@@ -1,5 +1,4 @@
 import express from "express";
-import sqlite3 from "sqlite3";
 
 import employeesRoutes from "./routes/employees.js";
 import projectsRoutes from "./routes/projects.js";
