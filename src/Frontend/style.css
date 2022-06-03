@@ -384,11 +384,7 @@
 }
 .tables .tables_content .items_size p{
     text-align: center;
-<<<<<<< Updated upstream
-    margin-top: 20px;
-=======
-    margin-top: 10px;
->>>>>>> Stashed changes
+    margin-top: 10;
 }
 .tables_items{
     display: flex;
@@ -415,15 +411,9 @@
 }
 
 
-<<<<<<< Updated upstream
-.table{
-    display: none;
-}
-=======
 /* .table{
     display: none;
 } */
->>>>>>> Stashed changes
 .table tr th{
     background-color: var(--secondary-color);
     color: var(--terciary-color);
@@ -466,11 +456,7 @@
 }
     
 .modal-forms{
-<<<<<<< Updated upstream
-    margin: 20px ;
-=======
     margin: 10px ;
->>>>>>> Stashed changes
     display: flex;
     height: 30px;
     width: 700px;
@@ -514,13 +500,7 @@
 }
 .btn{
     margin-left: 2vw;
-<<<<<<< Updated upstream
 }
-=======
-}
-
-
-
 
 
 
@@ -582,4 +562,3 @@
   tbody tr td.acao {
     text-align: center;
   }
->>>>>>> Stashed changes

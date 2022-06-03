@@ -11,11 +11,7 @@ function load_functions(){
 load_functions();
 
 function loadJSON(){
-<<<<<<< Updated upstream
     fetch("./data/main.db")
-=======
-    fetch("employees.json")
->>>>>>> Stashed changes
     .then(response => response.json())
     .then(data => {
         let html = '';
