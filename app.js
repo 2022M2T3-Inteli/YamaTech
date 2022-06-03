@@ -11,6 +11,7 @@ const PORT = 3000;
 
 app.use(express.static("src/frontend"));
 
+app.use(express.urlencoded());
 app.use(express.json());
 
 
