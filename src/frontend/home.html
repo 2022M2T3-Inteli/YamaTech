@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
         <script src="employees.js"></script>
@@ -21,7 +21,7 @@
     
     </head>
 
-<body>  
+<body class="dashboard">  
                     <!-- NAVIGATION BAR -->
                     <div class="navigation">
                         <div class="logo">
@@ -80,149 +80,74 @@
                     <!-- end of NAVIGATION BAR -->
                 
             
-            <div class="height col-11">
+            
                 <div class="top-bar row g-0" style="width: 101.15vw; height: 12%;">
                     <div class="user-box offset-11 col-1">
                         <ion-icon name="person-circle-outline" class="user"></ion-icon>
                     </div>
                 </div>
                 <div class="row g-0" style="height: 5%;"></div>
-                <div class="row g-0" style="height: 80%;">
-                    <div class="col-12" style="width: 95%;">
-                        <div class="row g-0" style="height: 49%;">
-                            <div class="col-6">
-                                <div id="myChart" class="charts"></div>
-                            </div>
-                            <div class="col-6">
-                                <!-- CAROUSEL -->
-                                <div id="carouselExampleIndicators" class="carousel slide charts" data-bs-ride="carousel">
-                                    <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                    </div>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="./img/yamaha1.jpeg" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="./img/yamaha2.jpeg" class="d-block w-100">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="./img/yamaha3.jpeg" class="d-block w-100">
-                                        </div>
-                                    </div>
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </button>
-                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </button>
-                                </div>
-                                <!-- end of CAROUSEL -->
-                            </div>
-                        </div>
-                       
-                        <div class="row g-0" style="height: 49%;">
-                            <div class="col-6">
-                                <canvas class="line-chart container charts" style="max-width: 400px; height:200px; margin-left: 18vw;"></canvas>
-                            </div>
-                            <div class="col-6">
-                                <div id="pieChart" class="charts"></div>
-                            </div>
-                        </div>
-                        <div class="row g-0" style="height: 49%;">
-                            <div class="col-6">
-                                <canvas id="leoChart" style="max-width: 400px; height:200px; margin-left: 18vw;"></canvas>
-                            </div>
-                            
-                        </div>
+               
+
+                 <!-- Inicio icons-->
+    <section class="icons-container">
+        <div class="icons">
+            <ion-icon name="people-circle-outline"></ion-icon>
+            <div class="content">
+                <h3>150</h3>
+                <p>Funcionários</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <div class="content">
+                <h3>127</h3>
+                <p>Projetos</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <ion-icon name="checkmark-done-circle-outline"></ion-icon>
+            <div class="content">
+                <h3>77</h3>
+                <p>Proj. Concluídos</p>
+            </div>
+        </div>
+
+        <div class="icons">
+            <ion-icon name="alert-outline"></ion-icon>
+            <div class="content">
+                <h3>50</h3>
+                <p>Proj. em andamento</p>
+            </div>
+        </div>
+
+       
+
+    </section>
+    <!-- Fim icons-->
+                
+                <!-- graficos -->
+                <div class="graphBox">
+                    <div class="box">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="box">
+                        <canvas id="myChart2"></canvas>
                     </div>
                 </div>
-            </div>
+
+                <div class="graphBox2">
+                    <div class="box">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                    <div class="box">
+                        <canvas id="myChart4"></canvas>
+                    </div>
+                </div>
     
-
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-        <script>
-            var ctx = document.getElementsByClassName("line-chart");
-            // Type, Data e options
-            var chartGraph = new Chart(ctx, {
-                type: 'line',
-                data: {
-                labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Ago","Set","Out","Nov","Dez"],
-                datasets: [{
-                    label: "HORAS MENSAIS P/ PROJETO - 2021",
-                    data: [5,3,9,1,7,3,6,2,9,7,1,8],
-                    borderWidth: 6,
-                    borderColor: 'rgba(77,166,253,0.85)',
-                    backgroundColor: 'transparent'
-                }]
-                }
-            })
-        </script>
-        
-        <script src="https://www.gstatic.com/charts/loader.js"></script>
-          <script>
-               function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-            ['Recursos Disponíveis', 'funcionários'],
-            ['Engenheiro de Dados', 55],
-            ['Analista de Sistemas', 49],
-            ['Dev Full Stack', 44],
-            ['Master Screwed', 24],
-            ['Engenhieiro de Software', 15],
-            ['Ux Designer', 59],
-          ]);
-          var options = {
-            title: 'Horas totais do projeto por mês',
-          };
-          var chart = new google.visualization.BarChart(document.getElementById('myChart'));
-          chart.draw(data, options);
-
-          }
-          google.charts.load('current',{packages:['corechart']});
-          google.charts.setOnLoadCallback(drawChart);
-          </script>
-
-        <script src="https://www.gstatic.com/charts/loader.js"></script>
-        <script>
-            function drawChart() {
-        var data_pie = google.visualization.arrayToDataTable([
-        ['Estoque por especialidade', 'funcionários'],
-        ['JavaScript', 30],
-        ['R', 12],
-        ['Node JS', 19],
-        ['Java', 29],
-        ['Phyton', 23],
-        ]);
-        var options_pie = {
-        title: 'Horas totais do projeto por mês',
-        };
-        var pie = new google.visualization.PieChart(document.getElementById('pieChart'));
-        pie.draw(data_pie, options_pie);
-        }
-        google.charts.load('current',{packages:['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-        </script>
-            
-    
-        <script>
-          var canvasElement = document.getElementById("leoChart");
-          var config = {
-              type: "bar",
-              data: {
-            labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
-                datasets: [{ label: "Projetos Por Mês", data: [5, 2, 12, 19, 29, 56, 98, 13, 46, 16, 83, 25] }],
-            }
-          }
-
-          var leoChart = new Chart(canvasElement, config)
-        </script>
-    
-     
-
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
+                <script src="charts.js"></script>
 </body>
 </html>
