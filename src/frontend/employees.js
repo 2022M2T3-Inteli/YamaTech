@@ -1,5 +1,5 @@
-let tableData = []
 function getEmployees() {
+    let tableData = []
     let url = "/employees"
     let xhttp = new XMLHttpRequest()
     xhttp.open("get", url, false)
@@ -8,25 +8,53 @@ function getEmployees() {
     data.forEach((element, index) => {
         tableData.push(element)
         tableData[index].delete = `
-            <button id="${element.id}" onclick="console.log(this.id)"><ion-icon name="trash-outline"></ion-icon></button>
+            <button id="${element.id}" onclick="deleteEmployee(this.id)"><ion-icon name="trash-outline"></ion-icon></button>
         `
     });
+    return tableData
+}
+
+// Delete employee
+function deleteEmployee(id) {
+    let url = `/employees/${id}`
+    let xhttp = new XMLHttpRequest()
+    
+    addListener(xhttp) //Get a return, when there is a change in database
+
+    xhttp.open("delete", url, true)
+    xhttp.send()
+}
+
+function editEmployee(id) {
+    let url = `/employees/${id}`
+    let xhttp = new XMLHttpRequest()
+    
+    addListener(xhttp)
+
+    xhttp.open("patch", url, true)
+    xhttp.send()
 }
 // function createEmployee() {
-//     let url = "/employees"
-//     let xhttp = new XMLHttpRequest()
-//     xhttp.open("post", url, false, name?)
-//     xhttp.send()
-// }
- 
-$(function() {
+    //     let url = "/employees"
+    //     let xhttp = new XMLHttpRequest()
+    //     xhttp.open("post", url, false, name?)
+    //     xhttp.send()
+    // }
+    
+function updateTable() {
     $(function() {
+        $('#table').bootstrapTable("destroy"); //Bootstrap table function to destroy the table
         $('#table').bootstrapTable({
-            data: tableData
+            data: getEmployees()
         });
     })
-})
-// getEmployees(data)
+}
+updateTable()
+
+function addListener(http) {
+    http.addEventListener('load', updateTable)
+}
+    // getEmployees(data)
 // getEmployees(data)
 // $('#filter-job').change(function() {
 //     $('#table').bootstrapTable('filterBy', {
@@ -58,6 +86,3 @@ function filterSpeciality(specialty) {
         $('#table').bootstrapTable('filterBy', {})
     }
 }
-
-
-getEmployees()
