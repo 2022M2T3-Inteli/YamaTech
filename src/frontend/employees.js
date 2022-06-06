@@ -1,4 +1,4 @@
-var getActiveEmpsDiv = "#empList";
+var getActiveEmpDiv = "#empList";
 
 
 function getEmpPage() {
@@ -14,10 +14,9 @@ function getEmpList(){
     xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
 
     res = JSON.parse(xhttp.responseText);
-    resFull = JSON.stringify(res) 
     
     for (i=0; i < res.length; i++) {
-        $(getActiveEmpsDiv).append(`<ul><li><div class="emp-item-1">${res[i].id}</div><div class="emp-item-2">${res[i].full_name}</div><div class="emp-item-3">${res[i].position}</div><div class="emp-item-4">${res[i].local}</div><button class="edit-btn"><span class="icon"><ion-icon name="create-outline"></ion-icon></span></button></li></ul>`);
+        $(getActiveEmpDiv).append(`<ul><li><div class="emp-item-1">${res[i].id}</div><div class="emp-item-2">${res[i].full_name}</div><div class="emp-item-3">${res[i].position}</div><div class="emp-item-4">${res[i].local}</div><button class="edit-btn"><span class="icon"><ion-icon name="create-outline"></ion-icon></span></button></li></ul>`);
     }
 }
 
@@ -51,4 +50,6 @@ function postEmp() {
             }
         )
     });
+
+    getEmpPage();
 }

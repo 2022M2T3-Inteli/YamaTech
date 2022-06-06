@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+    <script src="employees.js"></script>
   </head>
 
 <body class="background" onload="getEmpPage()">      
@@ -57,16 +58,16 @@
     </div>
 
     <div class="container-detls">
-        <form action="/employees" method="post" id="addEmp">
+        <form id="addEmp">
             <div class="employee-detls">
                 <div class="text-config input-box-one">
                     <span class="details">ID</span>
-                    <input name="id" type="text" placeholder="8" required>
+                    <input name="id" type="text" placeholder="8">
                 </div>
 
                 <div class="text-config input-box-two">
                     <span class="details">Nome</span>
-                    <input name="full_name" id="full_name" type="text" placeholder="Alexandra dAccomo" required>
+                    <input name="full_name" id="full_name" type="text" placeholder="Alexandre Silveira" required>
                 </div>
 
                 <div class="text-config input-box-two">
