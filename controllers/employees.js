@@ -7,7 +7,7 @@ export const getAll = (req, res) => {
 
     var sql = 'SELECT * FROM employees ORDER BY id';
 
-    var db = new sqlite3.Database("./data/main.db"); // Abre o banco
+    var db = new sqlite3.Database("./data/main.db"); //abre o banco
     db.all(sql, [], (err, rows) => {
         if (err) {
         throw err;
