@@ -62,7 +62,7 @@
             <div class="employee-detls">
                 <div class="text-config input-box-one">
                     <span class="details">ID</span>
-                    <input name="id" type="text" placeholder="8">
+                    <input id="id" name="id" type="text" placeholder="8">
                 </div>
 
                 <div class="text-config input-box-two">
@@ -101,9 +101,10 @@
                 </div>
 
                 <div class="button">
-                    <button type="submit" onclick="postEmp()">
+                    <button id="addBtn" type="submit" onclick="postEmp()">
                         <span class="icon">
-                            <ion-icon name="add-outline"></ion-icon>
+                            <ion-icon id="addBtn-Add" name="add-outline"></ion-icon>
+                            <ion-icon id="patchBtn-Patch" name="checkmark-done-outline"></ion-icon>
                         </span>
                     </button>
                 </div>

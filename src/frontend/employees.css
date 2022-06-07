@@ -200,9 +200,15 @@ form .employee-detls .button span {
     background:var(--light-secondary-color);
 }
 
-form .employee-detls .button span #add-btn {
+form .employee-detls .button span #addBtn-Add {
     width: 35px;
     height: 35px;
+}
+
+form .employee-detls .button span #patchBtn-Patch {
+    width: 35px;
+    height: 35px;
+    display: none;
 }
 
 /* end of EMPLOYEE DETAILS*/
@@ -255,6 +261,8 @@ form .employee-detls .button span #add-btn {
 .container-emp ul li {
     color: var(--main-color);
     background: var(--terciary-color);
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .container-emp ul li:hover {
@@ -273,6 +281,7 @@ form .employee-detls .button span #add-btn {
     display: inline;
     text-align: center;
     position: absolute;
+    padding-top: 10px;
 }
 
 .container-emp-header ul li .emp-item-1,
@@ -283,24 +292,55 @@ form .employee-detls .button span #add-btn {
 
 .container-emp-header ul li .emp-item-2,
 .container-emp ul li .emp-item-2 {
-    left: 5vw;
+    left: 7vw;
     min-width: 15vw;
 }
 
 .container-emp-header ul li .emp-item-3,
 .container-emp ul li .emp-item-3 {
-    left: 20vw;
+    left: 22vw;
     min-width: 15vw;
 }
 
 .container-emp-header ul li .emp-item-4,
 .container-emp ul li .emp-item-4 {
-    left: 40vw;
+    left: 38vw;
     min-width: 5vw;
 }
 
 .container-emp ul li .edit-btn {
+    position: absolute;
     left: 47vw;
-    min-width: 2vw;
+    top: 0.8vh;
+}
+
+.container-emp ul li .edit-btn button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background:var(--light-secondary-color);
+}
+
+.container-emp ul li .del-btn {
+    position: absolute;
+    left: 54vw;
+    top: 0.8vh;
+}
+
+.container-emp ul li .del-btn button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background:var(--light-secondary-color);
 }
 /* end of EMPLOYEES LIST */
