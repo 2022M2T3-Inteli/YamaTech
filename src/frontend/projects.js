@@ -106,8 +106,19 @@ function getEmployee(id) {
 }
 
 
+function delProject(id) {
+    var url = `http://127.0.0.1:3000/projects/${id}`;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("DELETE", url, false);
+    xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+    window.location.href = window.location.href;
+}
+
+
 function updateForm(id) {
-    var url = `http://127.0.0.1:3000/employees/${id}`;
+    var url = `http://127.0.0.1:3000/projects/${id}`;
     var res;
 
     var xhttp = new XMLHttpRequest();
@@ -115,6 +126,7 @@ function updateForm(id) {
     xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
 
     res = JSON.parse(xhttp.responseText);
+    console.log(res);
 
     document.getElementById("id").innerHTML = res[0].id;
     document.getElementById("project_name").innerHTML = res[0].project_name;
@@ -132,6 +144,9 @@ function updateForm(id) {
     }
     document.getElementById("id_employees").innerHTML = empls_id;
     document.getElementById("employees_allocated_hours").innerHTML = empls_time;
+
+    document.getElementById("btnLinear").classList.remove("buttonActive");
+    document.getElementById("btnLogistic").classList.remove("buttonActive");
 
     if (res[0].timeDistribution === 1)  {
         document.getElementById("btnLinear").classList.add("buttonActive");

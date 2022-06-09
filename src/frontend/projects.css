@@ -123,6 +123,64 @@ body {
     height: 57%;
 }
 
+/* begin of PROJECTS CARDS*/
+.grid-container-1-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons {
+    flex: 1;
+    height: 32vh;
+    background-image: linear-gradient(to bottom, var(--secondary-color), var(--light-secondary-color));
+    box-shadow: 0 7px 25px rgba(0,0,0,0.1);
+    color: var(--terciary-color);
+    border-radius: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    
+}
+
+.abc {
+    height: 5.9rem;
+    width: 5.9rem;
+    line-height: 5.9rem;
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+}
+.icons-container .icons .content h3{
+    color: var(--yellow);
+    font-size: 2.5rem;
+    cursor: default;
+}
+.icons-container .icons .content p{
+    font-size: 1.5rem;
+    cursor: default;
+}
+.icons-container .icons:hover{
+    cursor: pointer;
+    filter:brightness(1.3);
+}
+.icons-container .icons:hover ion-icon{
+    cursor: pointer;
+}
+.icons-container .icons:hover i{
+    cursor: pointer;
+}
+.icons-container .icons:hover .content h3{
+    cursor: pointer;
+}
+.icons-container .icons:hover .content p{
+    cursor: pointer;
+}
+/* end of PROJECTS CARDS*/
+
 /* begin of PROJECT DETAILS */
 .grid-container-2-0 {
     border: 3px solid var(--light-main-color);
@@ -145,7 +203,7 @@ body {
 .grid-container-2-0-0 {
     flex: 1;
     color: var(--terciary-color);
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
     font-weight: 800;
     font-size: 20px;
     align-items: center;
@@ -340,14 +398,10 @@ body {
     cursor: pointer;
 }
 
-.grid-container-2-1-1:hover {
-    background-color: var(--light-main-color);
-}
-
 .grid-container-2-1-0 {
     flex: 1;
     color: var(--terciary-color);
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
     font-weight: 800;
     font-size: 20px;
     align-items: center;
@@ -417,54 +471,3 @@ body {
 }
 /* end of PROJECT LIST */
 /* end of SCREEN GRID */
-
-.icons-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icons {
-    flex: 1;
-    background-image: linear-gradient(to bottom, var(--secondary-color), var(--light-secondary-color));
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-    color: var(--terciary-color);
-    border-radius: 20px;
-    margin-left: 1vw;
-    margin-right: 1vw;
-}
-
-.abc {
-    height: 5.9rem;
-    width: 5.9rem;
-    line-height: 5.9rem;
-    font-size: 2.5rem;
-    color: #fff;
-    text-align: center;
-}
-.icons-container .icons .content h3{
-    color: var(--yellow);
-    font-size: 2.5rem;
-    cursor: default;
-}
-.icons-container .icons .content p{
-    font-size: 1.5rem;
-    cursor: default;
-}
-.icons-container .icons:hover{
-    cursor: pointer;
-    filter:brightness(1.3);
-}
-.icons-container .icons:hover ion-icon{
-    cursor: pointer;
-}
-.icons-container .icons:hover i{
-    cursor: pointer;
-}
-.icons-container .icons:hover .content h3{
-    cursor: pointer;
-}
-.icons-container .icons:hover .content p{
-    cursor: pointer;
-}
-
