@@ -513,9 +513,9 @@
 .graphBox{
     margin-left: 70px;
     position: relative;
-    padding: 20px;
+    padding: 0 20px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     min-height: 200px;
 }
@@ -528,22 +528,11 @@
     background-color: #fff;
 }
 
-.graphBox2{
-    margin-left: 70px;
-    position: relative;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    min-height: 200px;
-}
-.graphBox2 .box{
-    position: relative;
-    padding: 10px;
-    width: 100%;
-    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
-    transition: .5s;
-    background-color: #fff;
+.limite{
+    background-color: red;
+    width: 530px;
+    height: 20px;
+    position: absolute;
 }
 
 
