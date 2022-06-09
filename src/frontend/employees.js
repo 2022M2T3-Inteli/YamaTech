@@ -16,8 +16,17 @@ function getEmpList(){
     res = JSON.parse(xhttp.responseText);
     
     for (i=0; i < res.length; i++) {
-        $(getActiveEmpDiv).append(`<ul><li><div class="emp-item-1">${res[i].id}</div><div class="emp-item-2">${res[i].full_name}</div><div class="emp-item-3">${res[i].position}</div><div class="emp-item-4">${res[i].local}</div><div class="edit-btn"><button onclick=patchEmp(${res[i].id})><span class="icon"><ion-icon name="create-outline"></ion-icon></span></button></div><div class="del-btn"><button onclick=delEmp(${res[i].id})><span class="icon"><ion-icon name="trash-outline"></ion-icon></span></button></div></li></ul>`);
+        $(getActiveEmpDiv).append(`<ul><li onclick=updateForm(${res[i].id})><div class="emp-item-1">${res[i].id}</div><div class="emp-item-2">${res[i].full_name}</div><div class="emp-item-3">${res[i].position}</div><div class="emp-item-4">${res[i].local}</div><div class="edit-btn"><button onclick=patchEmp(${res[i].id})><span class="icon"><ion-icon name="create-outline"></ion-icon></span></button></div><div class="del-btn"><button onclick=delEmp(${res[i].id})><span class="icon"><ion-icon name="trash-outline"></ion-icon></span></button></div></li></ul>`);
     }
+
+    document.getElementById("id").placeholder = res[0].id;
+    document.getElementById("full_name").placeholder = res[0].full_name;
+    document.getElementById("position").placeholder = res[0].position;
+    document.getElementById("legal_hours").placeholder = res[0].legal_hours;
+    document.getElementById("total_hours").placeholder = res[0].total_hours;
+    document.getElementById("allocated_hours").placeholder = res[0].allocated_hours;
+    document.getElementById("outsourced").placeholder = res[0].outsourced;
+    document.getElementById("local").placeholder = res[0].local;
 }
 
 function postEmp() {
@@ -100,20 +109,12 @@ function patchEmpII() {
     var allocated_hours = document.getElementById("allocated_hours").value;
     var outsourced = parseInt(document.getElementById("outsourced").value);
     var local = document.getElementById("local").value;
+    var isActive = 1;
 
-    console.log(id);
-    console.log(full_name);
-    console.log(position);
-    console.log(legal_hours);
-    console.log(total_hours);
-    console.log(allocated_hours);
-    console.log(outsourced);
+    var url = "http://127.0.0.1:3000/employees/";
 
-    var url = `http://127.0.0.1:3000/employees/${id}`;
-
-    console.log("a");
     $.ajax({
-        type: "PATCH",
+        type: "POST",
         url: url,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
@@ -125,11 +126,33 @@ function patchEmpII() {
                 "total_hours": total_hours,
                 "allocated_hours": allocated_hours,
                 "outsourced": outsourced,
-                "local": local
+                "local": local,
+                "isActive": isActive
             }
         )
-    })
-    console.log("b");
-    //document.getElementById("addBtn") = "postEmp()";
-    //getEmpPage();
+    });
+
+    delEmp(id);
+}
+
+function updateForm(id) {
+    document.getElementById("id").placeholder = id;
+
+    var url = `http://127.0.0.1:3000/employees/${id}`;
+    var res;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+    res = JSON.parse(xhttp.responseText);
+
+    document.getElementById("id").placeholder = id;
+    document.getElementById("full_name").placeholder = res[0].full_name;
+    document.getElementById("position").placeholder = res[0].position;
+    document.getElementById("legal_hours").placeholder = res[0].legal_hours;
+    document.getElementById("total_hours").placeholder = res[0].total_hours;
+    document.getElementById("allocated_hours").placeholder = res[0].allocated_hours;
+    document.getElementById("outsourced").placeholder = res[0].outsourced;
+    document.getElementById("local").placeholder = res[0].local;
 }
