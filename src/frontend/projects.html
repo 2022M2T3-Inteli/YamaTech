@@ -13,9 +13,10 @@
     <script src="projects.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
   </head>
 
-<body>      
+<body id="main-page">      
     <!-- begin of NAVIGATION BAR -->
     <div class="sidebar">
         <img class="yamaha-logo" src="img/yamaha_logo.png">
@@ -49,29 +50,46 @@
 
     <!-- begin of SCREEN GRID -->
     <!-- grids are used to position screen items -->
+
     <div class="grid-container-1">
-        <div style="background-color: green;">Div 1</div>
+        <!-- begin of DOUGHNUT CHART -->
+        <div>
+            <canvas class="doughnut-chart" id="doughnutChart"></canvas>
+        </div>
+        <!-- end of DOUGHNUT CHART -->
         <!-- begin of PROJECTS CARDS -->
         <div class="grid-container-1-1">
             <div class="icons">
-                <ion-icon class="abc-icon" name="people-circle-outline"></ion-icon>
-                <div class="content">
-                    <h4>Situação do</h4>
-                    <p>Funcionários</p>
+                <div class="icons-1">
+                    <ion-icon class="stack-icon" name="layers"></ion-icon>
                 </div>
-            </div>
-            <div class="icons">
-                <ion-icon name="clipboard-outline"></ion-icon>
-                <div class="content">
+                <div class="icons-2">
                     <h3>120</h3>
+                </div>
+                <div class="icons-3">
                     <p>Total de projetos</p>
                 </div>
             </div>
             <div class="icons">
-                <ion-icon name="checkmark-done-circle-outline"></ion-icon>
-                <div class="content">
-                    <h4>Total de Horas Alocadas</h4>
-                    <p>1200</p>
+                <div class="icons-1">
+                    <ion-icon class="stack-icon" name="alarm"></ion-icon>
+                </div>
+                <div class="icons-2">
+                    <h3>4000</h3>
+                </div>
+                <div class="icons-3">
+                    <p>Horas planejadas</p>
+                </div>
+            </div>
+            <div class="icons">
+                <div class="icons-1">
+                    <ion-icon class="stack-icon" name="layers"></ion-icon>
+                </div>
+                <div class="icons-2">
+                    <h3>80</h3>
+                </div>
+                <div class="icons-3">
+                    <p>Funcionários alocados</p>
                 </div>
             </div>
             

@@ -23,3 +23,8 @@ var b = new Date();
 console.log(b);
 console.log(b.getMonth());
 console.log(b.getDate());
+
+
+
+                
+                

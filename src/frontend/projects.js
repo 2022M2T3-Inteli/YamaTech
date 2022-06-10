@@ -3,7 +3,26 @@ var getProjectDiv = "#projDiv";
 
 document.addEventListener('DOMContentLoaded', () => {
     getProjectList();
+    setPixelToScreenScale();
  }, false);
+
+
+const SCREEN_WIDTH = 2560;
+const SCREEN_HEIGHT = 1600;
+
+const screenElem = document.getElementById("main-page");
+
+function setPixelToScreenScale() {
+  let screenToPixelScale;
+  if (window.innerWidth / window.innerHeight < GAME_WIDTH / GAME_HEIGHT) {
+    screenToPixelScale = window.innerWidth / GAME_WIDTH;
+  } else {
+    screenToPixelScale = window.innerHeight / GAME_HEIGHT;
+  }
+
+  screenElem.style.width = `${SCREEN_WIDTH * screenToPixelScale}px`;
+  screenElem.style.height = `${SCREEN_HEIGHT * screenToPixelScale}px`;
+}
 
 
 function getHome() {
