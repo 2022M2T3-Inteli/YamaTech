@@ -72,10 +72,10 @@
                     <ion-icon class="stack-icon" name="alarm"></ion-icon>
                 </div>
                 <div class="icons-2">
-                    <h3>3500</h3>
+                    <p><h3>56%</h3>Próprio</p>
                 </div>
                 <div class="icons-3">
-                    <p>Horas alocadas</p>
+                    <p><h3>44%</h3>Terceiro</p>
                 </div>
             </div>
             <div class="icons">
@@ -83,10 +83,10 @@
                     <ion-icon class="stack-icon" name="layers"></ion-icon>
                 </div>
                 <div class="icons-2">
-                    <h3>500</h3>
+                    <p><h3>60%</h3>São Paulo</p>
                 </div>
                 <div class="icons-3">
-                    <p>Horas disponíveis</p>
+                    <p><h3>40%</h3>Amazonas</p>
                 </div>
             </div>
             
@@ -189,34 +189,90 @@
                     <form>
                         <div class="input-box">
                             <span>Nome:</span>
-                            <input name="full_name_form" id="full_name_form" type="text" placeholder="Alexandre Silveira" required>
+                            <input name="full_name_form" id="full_name_form" type="text" required>
                         </div>
                         <div class="input-box">
                             <span>Cargo:</span>
-                            <input name="position_form" id="position_form" type="text" placeholder="Gerente de TI" required>
+                            <input name="position_form" id="position_form" type="text" required>
                         </div>
                         <div class="input-box">
                             <span>Horas legais:</span>
-                            <input name="legal_hours_form" id="legal_hours_form" type="text" placeholder="176h" required>
+                            <input name="legal_hours_form" id="legal_hours_form" type="number" required>
                         </div>
                         <div class="input-box">
                             <span>Horas totais:</span>
-                            <input name="total_hours_form" id="total_hours_form" type="text" placeholder="140h" required>
+                            <input name="total_hours_form" id="total_hours_form" type="number" required>
                         </div>
                         <div class="input-box">
                             <span>Horas alocadas:</span>
-                            <input name="allocated_hours_form" id="allocated_hours_form" type="text" placeholder="80h" required>
+                            <input name="allocated_hours_form" id="allocated_hours_form" type="number" required>
                         </div>
                         <div class="input-box">
                             <span>Regime contratual:</span>
-                            <input name="outsourced_form" id="outsourced_form" type="text" placeholder="PJ" required>
+                            <select name="outsourced_form" id="outsourced_form" type="text" required>
+                                <option value="">Selecione</option>
+                                <option value="1">Próprio</option>
+                                <option value="2">Terceiro</option>
+                            </select>
                         </div>
                         <div class="input-box">
                             <span>Local de trabalho:</span>
-                            <input name="local_form" id="local_form" type="text" placeholder="SP" required>
+                            <select name="local_form" id="local_form" type="text" required>
+                                <option value="">Selecione</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="São Paulo">São Paulo</option>
+                            </select>
                         </div>
-                        <button type="submit" class="btn btn-primary" onclick="postEmp()">
+                        <button type="submit" class="btn btn-primary" onclick="postEmployee()">
                             Incluir
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of POST MODAL -->
+
+    <!-- begin of PATCH MODAL -->
+    <div class="modal fade" id="patchModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Alteração de dados de colaborador</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="input-box">
+                            <span>Nome:</span>
+                            <input name="full_name_form_2" id="full_name_form_2" type="text" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Cargo:</span>
+                            <input name="position_form_2" id="position_form_2" type="text" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Horas legais:</span>
+                            <input name="legal_hours_form_2" id="legal_hours_form_2" type="number" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Horas totais:</span>
+                            <input name="total_hours_form_2" id="total_hours_form_2" type="number" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Horas alocadas:</span>
+                            <input name="allocated_hours_form_2" id="allocated_hours_form_2" type="number" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Regime contratual:</span>
+                            <input name="outsourced_form_2" id="outsourced_form_2" type="text" required>
+                        </div>
+                        <div class="input-box">
+                            <span>Local de trabalho:</span>
+                            <input name="local_form_2" id="local_form_2" type="text" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="patchButton" onclick="">
+                            Alterar
                         </button>
                     </form>
                 </div>
@@ -226,6 +282,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="employees.js"></script>
-    <!-- end of POST MODAL -->
+    <!-- end of PATCH MODAL -->
 </body>  
 </html>

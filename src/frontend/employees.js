@@ -76,7 +76,7 @@ function getEmployeesList() {
 }
 
 
-function postEmp() {
+function postEmployee() {
     var full_name = document.getElementById("full_name_form").value;
     var position = document.getElementById("position_form").value;
     var legal_hours = document.getElementById("legal_hours_form").value;
@@ -122,9 +122,7 @@ function delEmployee(id) {
 }
 
 
-function patchEmp(id) {
-    document.getElementById("id").placeholder = id;
-
+function patchEmployee(id) {
     var url = `http://127.0.0.1:3000/employees/${id}`;
     var res;
 
@@ -134,30 +132,33 @@ function patchEmp(id) {
 
     res = JSON.parse(xhttp.responseText);
 
-    document.getElementById("id").value = id;
-    document.getElementById("full_name").value = res[0].full_name;
-    document.getElementById("position").value = res[0].position;
-    document.getElementById("legal_hours").value = res[0].legal_hours;
-    document.getElementById("total_hours").value = res[0].total_hours;
-    document.getElementById("allocated_hours").value = res[0].allocated_hours;
-    document.getElementById("outsourced").value = res[0].outsourced;
-    document.getElementById("local").value = res[0].local;
+    document.getElementById("full_name_form_2").value = res[0].full_name;
+    document.getElementById("position_form_2").value = res[0].position;
+    document.getElementById("legal_hours_form_2").value = res[0].legal_hours;
+    document.getElementById("total_hours_form_2").value = res[0].total_hours;
+    document.getElementById("allocated_hours_form_2").value = res[0].allocated_hours;
+    document.getElementById("outsourced_form_2").value = res[0].outsourced;
+    document.getElementById("local_form_2").value = res[0].local;
 
-    document.getElementById("addBtn-Add").style.display = "none";
-    document.getElementById("patchBtn-Patch").style.display = "block";
+    onclick="patchEmployeeII()"
 
-    document.getElementById("addBtn").setAttribute( "onClick", "javascript: patchEmpII();" );
+    document.getElementById("patchButton").setAttribute("onClick", `javascript: patchEmployeeII(${id})`)
+
+    var patchModal = new bootstrap.Modal(document.getElementById("patchModal"), {
+        keyboard: false
+      });
+    patchModal.show();
 }
 
-function patchEmpII() {
-    var id = document.getElementById("id").value;
-    var full_name = document.getElementById("full_name").value;
-    var position = document.getElementById("position").value;
-    var legal_hours = document.getElementById("legal_hours").value;
-    var total_hours = document.getElementById("total_hours").value;
-    var allocated_hours = document.getElementById("allocated_hours").value;
-    var outsourced = parseInt(document.getElementById("outsourced").value);
-    var local = document.getElementById("local").value;
+function patchEmployeeII(id) {
+    
+    var full_name = document.getElementById("full_name_form_2").value;
+    var position = document.getElementById("position_form_2").value;
+    var legal_hours = document.getElementById("legal_hours_form_2").value;
+    var total_hours = document.getElementById("total_hours_form_2").value;
+    var allocated_hours = document.getElementById("allocated_hours_form_2").value;
+    var outsourced = document.getElementById("outsourced_form_2").value;
+    var local = document.getElementById("local_form_2").value;
     var isActive = 1;
 
     var url = "http://127.0.0.1:3000/employees/";
@@ -181,7 +182,7 @@ function patchEmpII() {
         )
     });
 
-    delEmp(id);
+    delEmployee(id);
 }
 
 function updateForm(id) {
