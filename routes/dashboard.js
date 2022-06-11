@@ -1,5 +1,5 @@
 import express from "express";
-import { getDashboard } from "../controllers/dashboard.js";
+import { getDashboard } from "../controllers/dashboard.js"; //commando de chamada para o dashboard
 
 const router = express.Router();
 

@@ -61,6 +61,7 @@ function getEmployeesList() {
         );
     }
 
+    //chamada 'get' para ter informções sobre id/nome completo, posição e outras ifnromações importantes dos funcionários. 
     document.getElementById("id").innerHTML = res[0].id;
     document.getElementById("full_name").innerHTML = res[0].full_name;
     document.getElementById("position").innerHTML = res[0].position;

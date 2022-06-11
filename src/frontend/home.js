@@ -36,7 +36,7 @@ for (let i=0; i < labels.length; i++) {
 
 function total_hours() {
     var thours = [];
-
+//labels identificados no gráfico de horas totais por mês, com uma visão macro 
     var labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
     var array = '[';
     for (let i=0; i < labels.length; i++) {
@@ -76,7 +76,7 @@ const ctx2 = document.getElementById('myChart2').getContext('2d');
 
 
 
-//Chart 1
+//Chart 1 --> gráfico referente ao limite de horas disponiveis, horas necessárias por projetos etc
 function grafico(teste) {
 
 

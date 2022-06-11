@@ -1,4 +1,4 @@
-import sqlite3 from "sqlite3";
+import sqlite3 from "sqlite3"; //importação para ter acesso ao banco de dados dos funcionários 
 
 
 export const getAll = (req, res) => {
@@ -79,6 +79,7 @@ export const patchEmployee = (req, res) => {
     var body = req.body;
     var sql;
 
+// informações para update full name, legal hours, position, total hours etc. 
     if (body.full_name) sql = `UPDATE employees SET full_name="${body.full_name}" WHERE id=${params.id}`;
     if (body.position) sql = `UPDATE employees SET position="${body.position}" WHERE id=${params.id}`;
     if (body.legal_hours) sql = `UPDATE employees SET legal_hours="${body.legal_hours}" WHERE id=${params.id}`;
