@@ -1,6 +1,3 @@
-var getEmployeeDiv = "#employeeDiv";
-
-
 document.addEventListener('DOMContentLoaded', () => {
     getEmployeesList();
  }, false);
@@ -33,7 +30,7 @@ function getEmployeesList() {
     res = JSON.parse(xhttp.responseText);
     
     for (i=0; i < res.length; i++) {
-        $(getEmployeeDiv).append(
+        $("#employeeDiv").append(
             `<div class="grid-container-2-1-1" onclick=updateForm(${res[i].id})>
                 <div class="grid-container-2-1-1-1">
                     ID:<span>${res[i].id}</span>

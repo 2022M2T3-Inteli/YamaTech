@@ -347,27 +347,23 @@ body {
     overflow: hidden;
 }
 
-.include-button {
-    position: absolute;
-    background: var(--light-secondary-color);
-    color: var(--terciary-color);
-    cursor: pointer;
-    bottom: 10px;
-    right: 20px;
-    height: 5vh;
-    width: 8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2.5vh;
+.btn-primary {
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 20px !important;
+    height: 5vh !important;
+    width: 8vw !important;
+    color: var(--terciary-color) !important;
+    background: var(--light-secondary-color) !important;
 }
 
-.include-button:hover {
-    color: var(--light-main-color);
+.btn-primary:hover {
+    color: var(--light-main-color) !important;
 }
 
-.include-button:active {
-    background: var(--secondary-color);
+.btn-primary:active {
+    color: var(--main-color) !important;
+    background: var(--secondary-color) !important;
 }
 /* end of PROJECT DETAILS */
 /* begin of PROJECT LIST */
@@ -454,4 +450,19 @@ body {
     margin-left: 2vw;
 }
 /* end of PROJECT LIST */
+
+/* begin of INCLUDE MODAL */
+.modal-body {
+    display: block !important;
+}
+
+.input-box {
+    display: flex;
+}
+
+.modal-footer {
+    display: block !important;
+}
+/* end of INCLUDE MODAL */
+
 /* end of SCREEN GRID */
