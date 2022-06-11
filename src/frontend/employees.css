@@ -451,7 +451,7 @@ body {
 }
 /* end of PROJECT LIST */
 
-/* begin of INCLUDE MODAL */
+/* begin of MODAL */
 .modal-body {
     display: block !important;
 }
@@ -463,6 +463,6 @@ body {
 .modal-footer {
     display: block !important;
 }
-/* end of INCLUDE MODAL */
+/* end of MODAL */
 
 /* end of SCREEN GRID */
