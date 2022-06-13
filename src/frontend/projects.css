@@ -54,6 +54,16 @@ body {
 .yamaha-logo {
     width: 100%;
     margin-bottom: 15vh;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .sidebar-link div,
@@ -317,12 +327,14 @@ body {
 }
 
 .grid-container-2-0-4-2-1,
-.grid-container-2-0-4-2-2 {
+.grid-container-2-0-4-2-2,
+.grid-container-2-0-4-2-3 {
     flex: 1;
     margin-top: 15px;
 }
 .grid-container-2-0-4-2-1 div,
-.grid-container-2-0-4-2-2 div {
+.grid-container-2-0-4-2-2 div,
+.grid-container-2-0-4-2-3 div {
     display: flex;
     flex: 1;
     justify-content: center;
@@ -350,27 +362,23 @@ body {
     margin-left: 10px;
 }
 
-.include-button {
-    position: absolute;
-    background: var(--light-secondary-color);
-    color: var(--terciary-color);
-    cursor: pointer;
-    bottom: 10px;
-    right: 20px;
-    height: 5vh;
-    width: 8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2.5vh;
+.btn-primary {
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 20px !important;
+    height: 5vh !important;
+    width: 8vw !important;
+    color: var(--terciary-color) !important;
+    background: var(--light-secondary-color) !important;
 }
 
-.include-button:hover {
-    color: var(--light-main-color);
+.btn-primary:hover {
+    color: var(--light-main-color) !important;
 }
 
-.include-button:active {
-    background: var(--secondary-color);
+.btn-primary:active {
+    color: var(--main-color) !important;
+    background: var(--secondary-color) !important;
 }
 /* end of PROJECT DETAILS */
 /* begin of PROJECT LIST */

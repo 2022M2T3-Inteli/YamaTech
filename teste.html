@@ -1,0 +1,91 @@
+<!-- begin of POST-2-MODAL -->
+<div class="modal fade" id="post-2-modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">POST 2</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="input-box">
+                      <span>Nome:</span>
+                      <input name="project_name_form_3" id="project_name_form" type="text" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Responsável:</span>
+                      <input name="owner_form_3" id="owner_form" type="text" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Data de início:</span>
+                      <input name="begin_date_form_3" id="begin_date_form" type="date" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Data de término:</span>
+                      <input name="finish_date_form_3" id="finish_date_form" type="date" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Local de trabalho:</span>
+                      <select name="local_form_3" id="local_form" type="text" required>
+                          <option value="">Selecione</option>
+                          <option value="Amazonas">Amazonas</option>
+                          <option value="São Paulo">São Paulo</option>
+                      </select>
+                  </div>
+                  <!-- <button type="submit" class="btn btn-primary" onclick="postProject1()">
+                      Incluir
+                  </button> -->
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- end of POST-2-MODAL -->
+
+<!-- begin of PATCH MODAL -->
+<div class="modal fade" id="patchModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Alteração de dados cadastrais</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="input-box">
+                      <span>Nome:</span>
+                      <input name="full_name_form_2" id="full_name_form_2" type="text" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Cargo:</span>
+                      <input name="position_form_2" id="position_form_2" type="text" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Horas legais:</span>
+                      <input name="legal_hours_form_2" id="legal_hours_form_2" type="number" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Horas totais:</span>
+                      <input name="total_hours_form_2" id="total_hours_form_2" type="number" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Horas alocadas:</span>
+                      <input name="allocated_hours_form_2" id="allocated_hours_form_2" type="number" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Regime contratual:</span>
+                      <input name="outsourced_form_2" id="outsourced_form_2" type="text" required>
+                  </div>
+                  <div class="input-box">
+                      <span>Local de trabalho:</span>
+                      <input name="local_form_2" id="local_form_2" type="text" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary" id="patchButton" onclick="">
+                      Alterar
+                  </button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- end of PATCH MODAL -->

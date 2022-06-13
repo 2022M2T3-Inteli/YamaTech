@@ -1,28 +1,6 @@
-var getProjectDiv = "#projDiv";
-
-
 document.addEventListener('DOMContentLoaded', () => {
     getProjectList();
-    setPixelToScreenScale();
  }, false);
-
-
-const SCREEN_WIDTH = 2560;
-const SCREEN_HEIGHT = 1600;
-
-const screenElem = document.getElementById("main-page");
-
-function setPixelToScreenScale() {
-  let screenToPixelScale;
-  if (window.innerWidth / window.innerHeight < GAME_WIDTH / GAME_HEIGHT) {
-    screenToPixelScale = window.innerWidth / GAME_WIDTH;
-  } else {
-    screenToPixelScale = window.innerHeight / GAME_HEIGHT;
-  }
-
-  screenElem.style.width = `${SCREEN_WIDTH * screenToPixelScale}px`;
-  screenElem.style.height = `${SCREEN_HEIGHT * screenToPixelScale}px`;
-}
 
 
 function getHome() {
@@ -52,7 +30,7 @@ function getProjectList() {
     res = JSON.parse(xhttp.responseText);
     
     for (i=0; i < res.length; i++) {
-        $(getProjectDiv).append(
+        $("#projDiv").append(
             `<div class="grid-container-2-1-1" onclick=updateForm(${res[i].id})>
                 <div class="grid-container-2-1-1-1">
                     ID:<span>${res[i].id}</span>
@@ -106,6 +84,9 @@ function getProjectList() {
     if (res[0].timeDistribution === 2)  {
         document.getElementById("btnLogistic").classList.add("buttonActive");
     }
+    if (res[0].timeDistribution === 3)  {
+        document.getElementById("btnManual").classList.add("buttonActive");
+    }
 
     document.getElementById("owner").innerHTML = res[0].owner;
     document.getElementById("local").innerHTML = res[0].local.replace("(", "").replace(")", "");
@@ -122,6 +103,41 @@ function getEmployee(id) {
     res = JSON.parse(xhttp.responseText);
 
     return res[0].full_name;
+}
+
+function postProject() {
+    var project_name = document.getElementById("project_name_form").value;
+    var owner = document.getElementById("owner_form").value;
+    var begin_date = document.getElementById("begin_date_form").value;
+    var finish_date = document.getElementById("finish_date_form").value;
+    var id_employees = document.getElementById("id_employees_form").value;
+    var employees_allocated_hours = document.getElementById("employees_allocated_hours_form").value;
+    var local = document.getElementById("local_form").value;
+    var timeDistribution = document.getElementById("timeDistribution").value;
+    var monthlyAlloc = document.getElementById("monthlyAlloc").value;
+
+    var url = "http://127.0.0.1:3000/projects/";
+
+    $.ajax({
+        type: "POST",
+        url: url,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: JSON.stringify(
+            {
+                "project_name": project_name,
+                "owner": owner,
+                "begin_date": begin_date,
+                "finish_date": finish_date,
+                "id_employees": id_employees,
+                "employees_allocated_hours": employees_allocated_hours,
+                "local": local,
+                "timeDistribution": timeDistribution,
+                "monthlyAlloc": monthlyAlloc,
+                "isActive": 1
+            }
+        )
+    });
 }
 
 
@@ -145,7 +161,6 @@ function updateForm(id) {
     xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
 
     res = JSON.parse(xhttp.responseText);
-    console.log(res);
 
     document.getElementById("id").innerHTML = res[0].id;
     document.getElementById("project_name").innerHTML = res[0].project_name;
@@ -166,12 +181,16 @@ function updateForm(id) {
 
     document.getElementById("btnLinear").classList.remove("buttonActive");
     document.getElementById("btnLogistic").classList.remove("buttonActive");
+    document.getElementById("btnManual").classList.remove("buttonActive");
 
     if (res[0].timeDistribution === 1)  {
         document.getElementById("btnLinear").classList.add("buttonActive");
     }
     if (res[0].timeDistribution === 2)  {
         document.getElementById("btnLogistic").classList.add("buttonActive");
+    }
+    if (res[0].timeDistribution === 3)  {
+        document.getElementById("btnManual").classList.add("buttonActive");
     }
 
     document.getElementById("owner").innerHTML = res[0].owner;

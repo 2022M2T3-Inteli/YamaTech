@@ -54,6 +54,16 @@ body {
 .yamaha-logo {
     width: 100%;
     margin-bottom: 15vh;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .sidebar-link div,
