@@ -1,15 +1,26 @@
 var a = [
     {
-        "Fri Jul 01 2022 14:23:10 GMT-0300 (Brasilia Standard Time)": 21.666666666666668,
-        "Mon Aug 01 2022 14:23:10 GMT-0300 (Brasilia Standard Time)": 21.666666666666668,
-        "Thu Sep 01 2022 14:23:10 GMT-0300 (Brasilia Standard Time)": 24.416666666666668,
-        "Sat Oct 01 2022 14:23:10 GMT-0300 (Brasilia Standard Time)": 27.166666666666668,
-        "Tue Nov 01 2022 14:23:10 GMT-0300 (Brasilia Standard Time)": 27.166666666666668,
-        "Thu Dec 01 2022 14:23:10 GMT-0300 (Brasilia Standard Time)": 29.916666666666668,
-        "Sun Jan 01 2023 14:23:10 GMT-0300 (Brasilia Standard Time)": 8.25,
-        "Wed Feb 01 2023 14:23:10 GMT-0300 (Brasilia Standard Time)": 11,
-        "Wed Mar 01 2023 14:23:10 GMT-0300 (Brasilia Standard Time)": 8.25,
-        "Sat Apr 01 2023 14:23:10 GMT-0300 (Brasilia Standard Time)": 5.5
+        // "Jul": 400,
+        // "Ago": 700,
+        // "Set": 350,
+        // "Out": 790,
+        // "Nov": 650,
+        // "Dez": 555,
+        // "Jan": 230,
+        // "Fev": 110,
+        // "Mar": 800,
+        // "Abr": 500
+
+        "Jan": 400,
+        "Fev": 700,
+        "Mar": 350,
+        "Abr": 790,
+        "Jun": 650,
+        "Jul": 555,
+        "Ago": 230,
+        "Out": 110,
+        "Nov": 800,
+        "Dez": 500
     },
     {
         "legal_hours": 704,
@@ -18,7 +29,16 @@ var a = [
     }
 ]
 
-//console.log(a[1]["legal_hours"]);
+
+
+function hours(){
+    var hours = [];
+    hours = (a[0]);
+    return hours;
+}
+
+
+
 function legal_hours() {
 var lhours = [];
 
@@ -74,6 +94,12 @@ legal_hours();
 const ctx = document.getElementById('myChart').getContext('2d');
 const ctx2 = document.getElementById('myChart2').getContext('2d');
 
+let delayed;
+
+// Gradient color
+let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, "rgb(1, 1, 1) ");
+gradient.addColorStop(1, "rgba(0, 100, 255, .3)")
 
 
 //Chart 1 --> gráfico referente ao limite de horas disponiveis, horas necessárias por projetos etc
@@ -87,45 +113,77 @@ const myChart = new Chart(ctx, {
         type: 'line',
         labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
         datasets: [{
-        label: 'Limite de Horas Disponíveis',
+        label: 'Limite de Horas Legalizadas',
             type: 'line',
             data: legal_hours(),
             backgroundColor: "rgb(255,0,0)",
             fill: false,
-            borderColor: 'rgb(255, 0, 0)'
+            borderColor: 'rgb(255, 0, 0)',
+            pointBackgroundColor: "rgba(0,0,0,0)",
+            pointBorderColor: "rgba(0,0,0,0)",
 
         },
         {
-            label: 'Limite de Horas Disponíveis',
+            label: 'Total de Horas',
                 type: 'line',
                 data: total_hours(),
                 backgroundColor: "rgb(0, 250, 20)",
                 fill: false,
-                borderColor: 'rgb(0, 250, 20)'
+                borderColor: 'rgb(0, 250, 20)',
+                pointBackgroundColor: "rgba(0,0,0,0)",
+                pointBorderColor: "rgba(0,0,0,0)"
                
         },
         {
-            label: 'Limite de Horas Disponíveis',
+            label: 'Horas Alocadas',
                 type: 'line',
                 data: allocated_hours(),
-                backgroundColor: "rgb(0, 200, 255)",
+                backgroundColor: 'rgb(256, 200, 0)',
                 fill: false,
-                borderColor: 'rgb(0, 200, 255)'
+                borderColor: 'rgb(256, 200, 0)',
+                pointBackgroundColor: "rgba(0,0,0,0)",
+                pointBorderColor: "rgba(0,0,0,0)"
                
         },
         {
         label: 'Horas Necessárias Por Projetos',
-            data: [690, 560, 400, 480, 800, 712, 1014 , 580, 777, 200, 400, 200],
+            data: hours(),
             backgroundColor: [
                 'rgba(54,120,230,1)',
             ],
+            borderColor: "#eff",
             fill: true,
-            backgroundColor: 'rgba(54,120,230,0.5)',
+            hitRadius: 30,
+            hoverRadius: 5,
+            backgroundColor: gradient,
+            pointBackgroundColor: "rgb(255,255,255)",
+            pointBorderColor: "rgb(200,200,200)"
         }]
     },
     options: {
        responsive: true,
-    }
+       animation: {
+        onComplete: () => {
+            delayed = true;
+        },
+        delay: (context) => {
+            let delay = 0;
+            if (context.type === "data" && context.mode === "default" && !delayed){
+                delay = context.dataIndex * 300 + context.datasetIndex * 100;
+            }
+            return delay;
+        },
+       },
+       scales: {
+        y:{
+            ticks:{
+                callback: function (value) {
+                    return  value + "h";
+                },
+            },
+        },
+       },
+    },
     
 });
 
@@ -137,19 +195,29 @@ const myChart2 = new Chart(ctx2, {
         labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
         datasets: [{
             label: 'Horas Necessárias Por Projetos',
-            data: [12, 19, 3, 5, 2, 3, 8 , 5, 9, 10, 47, 4],
+            data: hours(),
             backgroundColor: [
                 'rgba(54,120,230,1)',
             ],
-            backgroundColor: 'rgba(54,120,230,0.5)',
+            backgroundColor: gradient,
         }]
         
     },
     options: {
        responsive: true,
+       animation: {
+        onComplete: () => {
+            delayed = true;
+        },
+        delay: (context) => {
+            let delay = 0;
+            if (context.type === "data" && context.mode === "default" && !delayed){
+                delay = context.dataIndex * 300 + context.datasetIndex * 100;
+            }
+            return delay;
+        },
+       },
     },
     
             
 });
-
-
