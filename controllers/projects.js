@@ -77,18 +77,9 @@ export const patchProject = (req, res) => {
     var params = req.params;
     var body = req.body;
     var sql;
-
-    if (body.project_name) sql = `UPDATE projects SET project_name="${body.project_name}" WHERE id=${params.id}`;
-    if (body.owner) sql = `UPDATE projects SET owner="${body.owner}" WHERE id=${params.id}`;
-    if (body.begin_date) sql = `UPDATE projects SET begin_date="${body.begin_date}" WHERE id=${params.id}`;
-    if (body.finish_date) sql = `UPDATE projects SET finish_date="${body.finish_date}" WHERE id=${params.id}`;
-    if (body.id_employees) sql = `UPDATE projects SET id_employees="${body.id_employees}" WHERE id=${params.id}`;
-    if (body.employees_allocated_hours) sql = `UPDATE projects SET employees_allocated_hours="${body.employees_allocated_hours}" WHERE id=${params.id}`;
-    if (body.local) sql = `UPDATE projects SET local="${body.local}" WHERE id=${params.id}`;
-    if (body.timeDistribution) sql = `UPDATE projects SET timeDistribution="${body.timeDistribution}" WHERE id=${params.id}`;
-    if (body.monthlyAlloc) sql = `UPDATE projects SET monthlyAlloc="${body.monthlyAlloc}" WHERE id=${params.id}`;
-    if (body.isActive) sql = `UPDATE projects SET isActive="${body.isActive}" WHERE id=${params.id}`;
 	
+    sql = `UPDATE projects SET project_name="${body.project_name}", owner="${body.owner}", local="${body.local}" WHERE id=${params.id}`;
+
     var db = new sqlite3.Database("./data/main.db"); // Abre o banco
 	db.run(sql, [],  err => {
 		if (err) {
@@ -98,6 +89,4 @@ export const patchProject = (req, res) => {
 		res.end();
 	});
 	db.close(); // Fecha o banco
-
-    
 }

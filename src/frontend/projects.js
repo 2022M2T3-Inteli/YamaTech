@@ -1,6 +1,29 @@
+var employeeCount = 1;
+
 document.addEventListener('DOMContentLoaded', () => {
     getProjectList();
  }, false);
+
+
+ $('#postModal').on('shown.bs.modal', function (e) {
+    var url = "http://127.0.0.1:3000/employees/";
+    var res;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+    res = JSON.parse(xhttp.responseText);
+    
+    var selectElem = document.getElementById("employees_form_1");
+    
+    for (i=0; i < res.length; i++) {
+        let opt = document.createElement("option");
+        opt.value = res[i].id;
+        opt.innerHTML = res[i].full_name;
+        selectElem.appendChild(opt);
+    }
+  })
 
 
 function getHome() {
@@ -105,17 +128,199 @@ function getEmployee(id) {
     return res[0].full_name;
 }
 
+function monthDiff(start, end) {
+    return 1 + end.getMonth() - start.getMonth() + (12 * (end.getFullYear() - start.getFullYear()));
+}
+
+
+function getAllocationBoxes() {
+    var end = document.getElementById("finish_date_form").value;
+    var start = document.getElementById("begin_date_form").value;
+    var id = document.getElementById(`id_employees_form_${employeeCount}`)
+
+    let startDate = start.split("-");
+    let endDate = end.split("-");
+
+    var d0 = new Date();
+    d0.setFullYear(startDate[1], startDate[0]-1, 1);
+
+    var dn = new Date();
+    dn.setFullYear(endDate[1], endDate[0]-1, 1);
+
+    var months = monthDiff(d0, dn);
+
+    $("employeeSelection").append(`
+        <div class="input-box" id="manualDistrAlloc_${employeeCount}">`
+    );
+
+    for (i=0; i < months; i++) {
+        $("#employeeSelection").append(
+            `<span>Mês ${i+1}:</span>
+            <input name="id_${employeeCount}_employees_form_${i}" id="id_${employeeCount}_employees_form_${i}" type="text" required>`
+        );
+    }
+
+    $("#employeeSelection").append(
+        `<button type="button" onclick="includeNew()">Incluir Novo</button>
+        </div>`
+    );
+}
+
+
+function distrMethod(event) {
+    var method = document.getElementById("timeDistribution").value;
+    if (method != 3) {
+        document.getElementById("modalBtn").setAttribute( "onclick", "includeNewRegr()")
+    }
+}
+
+
+function includeNew() {
+    employeeCount++;
+    $("#employeeSelection").append(
+        `<span>Nome do funcionário:</span>
+        <select name="employees_form_${employeeCount}" id="employees_form_${employeeCount}" type="text" required>
+            <option value="">Selecione</option>
+        </select>
+        <span>Horas alocadas por funcionários:</span>
+        <input name="employees_allocated_hours_form_${employeeCount}" id="employees_allocated_hours_form_${employeeCount}" type="text" required>
+        <button onclick="getAllocationBoxes()">></button>`
+    );
+
+    var url = "http://127.0.0.1:3000/employees/";
+    var res;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+    res = JSON.parse(xhttp.responseText);
+    
+    var selectElem = document.getElementById(`employees_form_${employeeCount}`);
+    
+    for (i=0; i < res.length; i++) {
+        let opt = document.createElement("option");
+        opt.value = res[i].id;
+        opt.innerHTML = res[i].full_name;
+        selectElem.appendChild(opt);
+    }
+}
+
+
+function includeNewRegr() {
+    employeeCount++;
+    $("#employeeSelection").append(
+        `<span>Nome do funcionário:</span>
+        <select name="employees_form_${employeeCount}" id="employees_form_${employeeCount}" type="text" required>
+            <option value="">Selecione</option>
+        </select>
+        <span>Horas alocadas por funcionários:</span>
+        <input name="employees_allocated_hours_form_${employeeCount}" id="employees_allocated_hours_form_${employeeCount}" type="text" required>
+        <button onclick="includeNewRegr()">></button>`
+    );
+
+    var url = "http://127.0.0.1:3000/employees/";
+    var res;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+
+    res = JSON.parse(xhttp.responseText);
+    
+    var selectElem = document.getElementById(`employees_form_${employeeCount}`);
+    
+    for (i=0; i < res.length; i++) {
+        let opt = document.createElement("option");
+        opt.value = res[i].id;
+        opt.innerHTML = res[i].full_name;
+        selectElem.appendChild(opt);
+    }
+}
+
+
+function getIdEmployees() {
+    var tmp = "(";
+    for (i=0; i < employeeCount-1; i++) {
+        let id = document.getElementById(`employees_form_${i+1}`).value;
+        tmp += `${id}, `;
+    }
+    let id = document.getElementById(`employees_form_${employeeCount}`).value;
+        tmp += `${id})`;
+
+    return tmp;
+}
+
+function getAllocatedHours() {
+    var tmp = "(";
+    for (i=0; i < employeeCount-1; i++) {
+        let allocHours = document.getElementById(`employees_allocated_hours_form_${i+1}`).value;
+        tmp += `${allocHours}, `;
+    }
+    let allocHours = document.getElementById(`employees_allocated_hours_form_${employeeCount}`).value;
+        tmp += `${allocHours})`;
+    
+    return tmp;
+}
+
+function getMonthlyAlloc() {
+
+    var end = document.getElementById("finish_date_form").value;
+    var start = document.getElementById("begin_date_form").value;
+
+    let startDate = start.split("-");
+    let endDate = end.split("-");
+
+    var d0 = new Date();
+    d0.setFullYear(startDate[1], startDate[0]-1, 1);
+
+    var dn = new Date();
+    dn.setFullYear(endDate[1], endDate[0]-1, 1);
+
+    var months = monthDiff(d0, dn);
+
+
+    var tmp = "[[";
+    for (i=1; i <= employeeCount; i++) {
+        for (j=0; j < months; j++) {
+            var aux = document.getElementById(`id_${i}_employees_form_${j}`).value;
+            tmp += `${aux}, `;            
+        }
+        var aux1 = document.getElementById(`id_${i}_employees_form_${months-1}`).value;
+        tmp += `${aux1}`;            
+        tmp += `], [`;
+    }
+    tmp = tmp.substring(0, tmp.length-4);
+    tmp += "]]";
+    return tmp;
+}
+
+
 function postProject() {
     var project_name = document.getElementById("project_name_form").value;
+    console.log(project_name);
     var owner = document.getElementById("owner_form").value;
+    console.log(owner);
     var begin_date = document.getElementById("begin_date_form").value;
+    console.log(begin_date);
     var finish_date = document.getElementById("finish_date_form").value;
-    var id_employees = document.getElementById("id_employees_form").value;
-    var employees_allocated_hours = document.getElementById("employees_allocated_hours_form").value;
-    var local = document.getElementById("local_form").value;
+    console.log(finish_date);
     var timeDistribution = document.getElementById("timeDistribution").value;
-    var monthlyAlloc = document.getElementById("monthlyAlloc").value;
-
+    console.log(timeDistribution);
+    var id_employees = getIdEmployees();
+    console.log(id_employees);
+    var employees_allocated_hours = getAllocatedHours();
+    console.log(employees_allocated_hours);
+    var local = document.getElementById("local_form").value;
+    console.log(local);
+    var monthlyAlloc;
+    if (timeDistribution == 3) {
+        monthlyAlloc = getMonthlyAlloc();
+    } else {
+        monthlyAlloc = 0;
+    }
+    console.log(monthlyAlloc);
+    
     var url = "http://127.0.0.1:3000/projects/";
 
     $.ajax({
@@ -138,7 +343,22 @@ function postProject() {
             }
         )
     });
+
+    employeeCount = 1;
 }
+
+$( function() {
+    $( "#begin_date_form" ).datepicker();
+    $( "#begin_date_form" ).on( "change", function() {
+      $( "#begin_date_form" ).datepicker( "option", "dateFormat", "mm-yy" );
+    });
+  } );
+$( function() {
+    $( "#finish_date_form" ).datepicker();
+    $( "#finish_date_form" ).on( "change", function() {
+      $( "#finish_date_form" ).datepicker( "option", "dateFormat", "mm-yy" );
+    });
+  } );
 
 
 function delProject(id) {
@@ -150,6 +370,54 @@ function delProject(id) {
 
     window.location.href = window.location.href;
 }
+
+
+function patchProject(id) {
+    var url = `http://127.0.0.1:3000/projects/${id}`;
+    var res;
+  
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send(); //A execução do script pára aqui até a requisição retornar do servidor
+  
+    res = JSON.parse(xhttp.responseText);
+  
+    document.getElementById("project_name_form_2").value = res[0].project_name;
+    document.getElementById("owner_form_2").value = res[0].owner;
+    document.getElementById("local_form_2").value = res[0].local;
+  
+    document
+      .getElementById("patchButton")
+      .setAttribute("onClick", `javascript: patchProjectII(${id})`);
+  
+    var patchModal = new bootstrap.Modal(document.getElementById("patchModal"), {
+      keyboard: false,
+    });
+    patchModal.show();
+  }
+  
+  function patchProjectII(id) {
+    var project_name = document.getElementById("project_name_form_2").value;
+    var owner = document.getElementById("owner_form_2").value;
+    var local = document.getElementById("local_form_2").value;
+  
+    var url = "http://127.0.0.1:3000/projects/" + id;
+  
+    $.ajax({
+      type: "PATCH",
+      url: url,
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      data: JSON.stringify({
+        project_name: project_name,
+        owner: owner,
+        local: local,
+      }),
+      success: function (res) {
+        console.log(res);
+      },
+    });
+  }
 
 
 function updateForm(id) {

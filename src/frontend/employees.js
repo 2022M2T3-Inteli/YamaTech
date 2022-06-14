@@ -83,7 +83,6 @@ function getEmployeesList() {
 }
 
 function postEmployee() {
-  var id = document.getElementById("id_form").value;
   var full_name = document.getElementById("full_name_form").value;
   var position = document.getElementById("position_form").value;
   var legal_hours = document.getElementById("legal_hours_form").value;
@@ -101,7 +100,6 @@ function postEmployee() {
     contentType: "application/json; charset=utf-8",
     dataType: "json",
     data: JSON.stringify({
-      id: id,
       full_name: full_name,
       position: position,
       legal_hours: legal_hours,
