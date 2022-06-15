@@ -181,9 +181,11 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
+                    <img class="yamaha-logo" src="img/yamaha_logo.png">
                     <h5 class="modal-title">Inclusão de novo colaborador</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <button type="button" class="modal_close"  data-bs-dismiss="modal"><ion-icon name="close-circle-outline"></ion-icon></button>
                 </div>
+                <h3><div class="underline"><span></span></div></h3>
                 <div class="modal-body">
                     <form>
                         <div class="input-box">
@@ -222,8 +224,12 @@
                                 <option value="São Paulo">São Paulo</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary" onclick="postEmployee()">
+                        
+                        <button type="submit" class="btn-modal" onclick="postEmployee()">
                             Incluir
+                        </button>
+                        <button type="button" data-bs-dismiss="modal" class="btn-modal-cancel" onclick="postEmployee()">
+                            Cancelar
                         </button>
                     </form>
                 </div>

@@ -462,12 +462,60 @@ body {
 /* end of PROJECT LIST */
 
 /* begin of MODAL */
+.modal-content{
+    margin-top: -13px;
+    height: 95vh;
+    border: 4px solid #fff;
+    background-color: #eee;
+}
 .modal-body {
     display: block !important;
+    margin: auto;
 }
-
+.btn-modal{
+    margin-top: 4px;
+    margin-left: 20px;
+    float: right;
+    height: 35px;
+    width: 90px;
+    border: none;
+    background-color: var(--light-secondary-color);
+    color: #fff;
+    border-radius: 5px;
+    transition: .3s;
+}
+.btn-modal-cancel{
+    margin-top: 4px;
+    float: right;
+    height: 35px;
+    width: 90px;
+    border: none;
+    background-color: #fff;
+    color: var(--light-secondary-color);
+    border-radius: 2px;
+    border: 4px solid var(--light-secondary-color);
+    transition: .3s;
+}
+.btn-modal:hover{
+    background-color: var(--dark-main-color);
+    color: #fff;
+}
+.btn-modal-cancel:hover{
+    background-color: #fff;
+    color: var(--dark-main-color);
+    border: 4px solid var(--dark-main-color);
+}
 .input-box {
+    padding: 4px 0;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.input-box input{
+    width: 400px;
+    border: 1px solid var(--dark-main-color);
+    height: 28px;
+    border-radius: 5px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -475,9 +523,77 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+.modal-header{
+    padding: 10px 20px 10px 20px;
+    background-image: linear-gradient(to right, var(--dark-main-color) , var(--main-color));
+    color: #fff;
+    height: 50px;
+    margin-top: 0;
+    display: flex;
+    
+}
+.modal-header .yamaha-logo{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-bottom: 0;
+    margin-right: -60px;
+}
 .modal-footer {
     display: block !important;
+}
+.modal_close{
+    background: none;
+    border: none;
+    color: #fff;
+    
+}
+.modal_close ion-icon{
+    font-size: 30px;
+    margin-top: 6px;
+    transition: .3s;
+}
+.modal_close:hover ion-icon{
+    color: var(--light-secondary-color);
+}
+.underline{
+    margin-top: 20px;
+    width: 492px;
+    height: 5px;
+    background: #414141;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+.underline span{
+    width: 100px;
+    height: 100%;
+    background-color: #7096d1;
+    position: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 3s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    .col:nth-child(2), .col:nth-child(3){
+        flex-basis: 100%;
+    }
 }
 /* end of MODAL */
 
