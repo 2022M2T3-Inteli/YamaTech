@@ -21,3 +21,5 @@ app.use("/projects", projectsRoutes);
 app.use("/dashboard", dashboardRoutes);
 
 app.listen(PORT, () => console.log(`Server running on http://${hostname}:${PORT}`));
+
+var a;
