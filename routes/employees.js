@@ -32,4 +32,4 @@ router.get("/", (_req, res) => {
 // router.patch("/:id", patchEmployee);
 
 // export default router;
-module.exports = router;
+// module.exports = router;
