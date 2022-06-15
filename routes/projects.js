@@ -1,17 +1,20 @@
-import express from "express";
-import { getAll, createProject, getProject, deleteProject, patchProject } from "../controllers/projects.js";
+// const express = require( "express");
+// // import { getAll, createProject, getProject, deleteProject, patchProject } from "../controllers/projects.js";
 
-const router = express.Router();
+// const getAll = require("../controllers/projects.js");
 
-//all routes in here are starting with /projects
-router.get("/", getAll);
+// const router = express.Router();
 
-router.post("/", createProject);
+// //all routes in here are starting with /projects
+// router.get("/", getAll);
 
-router.get("/:id", getProject);
+// // router.post("/", createProject);
 
-router.delete("/:id", deleteProject);
+// // router.get("/:id", getProject);
 
-router.patch("/:id", patchProject);
+// // router.delete("/:id", deleteProject);
 
-export default router;
+// // router.patch("/:id", patchProject);
+
+// // export default router;
+// module.exports = router;

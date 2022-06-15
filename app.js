@@ -1,9 +1,9 @@
-import express from "express";
-import cors from "cors";
+const express = require("express");
+// import cors from "cors";
 
-import employeesRoutes from "./routes/employees.js";
-import projectsRoutes from "./routes/projects.js";
-import dashboardRoutes from "./routes/dashboard.js";
+const employeesRoutes = require("./routes/employees.js");
+// const projectsRoutes = require("./routes/projects.js");
+// import dashboardRoutes from "./routes/dashboard.js";
 
 
 //server settings
@@ -13,11 +13,11 @@ const PORT = 3000;
 
 app.use(express.static("src/frontend"));
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 app.disable('x-powered-by');
 
 app.use("/employees", employeesRoutes);
-app.use("/projects", projectsRoutes);
-app.use("/dashboard", dashboardRoutes);
+// app.use("/projects", projectsRoutes);
+// app.use("/dashboard", dashboardRoutes);
 
 app.listen(PORT, () => console.log(`Server running on http://${hostname}:${PORT}`));

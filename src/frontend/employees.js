@@ -7,23 +7,23 @@ document.addEventListener(
 );
 
 function getHome() {
-  window.location.href = "http://localhost:3000/home.html";
+  window.location.href = "https://projeto3-yamaha.herokuapp.com/home.html";
 }
 
 function getEmployees() {
-  window.location.href = "http://localhost:3000/employees.html";
+  window.location.href = "https://projeto3-yamaha.herokuapp.com/employees.html";
 }
 
 function getProjects() {
-  window.location.href = "http://localhost:3000/projects.html";
+  window.location.href = "https://projeto3-yamaha.herokuapp.com/projects.html";
 }
 
 function logOut() {
-  window.location.href = "http://localhost:3000/index.html";
+  window.location.href = "https://projeto3-yamaha.herokuapp.com/index.html";
 }
 
 function getEmployeesList() {
-  var url = "http://127.0.0.1:3000/employees/";
+  var url = "https://projeto3-yamaha.herokuapp.com/employees/";
   var res;
 
   var xhttp = new XMLHttpRequest();
@@ -92,7 +92,7 @@ function postEmployee() {
   var local = document.getElementById("local_form").value;
   var isActive = 1;
 
-  var url = "http://127.0.0.1:3000/employees/";
+  var url = "https://projeto3-yamaha.herokuapp.com/employees/";
 
   $.ajax({
     type: "POST",
@@ -113,7 +113,7 @@ function postEmployee() {
 }
 
 function delEmployee(id) {
-  var url = `http://127.0.0.1:3000/employees/${id}`;
+  var url = `https://projeto3-yamaha.herokuapp.com/employees/${id}`;
 
   var xhttp = new XMLHttpRequest();
   xhttp.open("DELETE", url, false);
@@ -123,7 +123,7 @@ function delEmployee(id) {
 }
 
 function patchEmployee(id) {
-  var url = `http://127.0.0.1:3000/employees/${id}`;
+  var url = `https://projeto3-yamaha.herokuapp.com/employees/${id}`;
   var res;
 
   var xhttp = new XMLHttpRequest();
@@ -161,7 +161,7 @@ function patchEmployeeII(id) {
   var local = document.getElementById("local_form_2").value;
   var isActive = 1;
 
-  var url = "http://127.0.0.1:3000/employees/" + id;
+  var url = "https://projeto3-yamaha.herokuapp.com/employees/" + id;
 
   $.ajax({
     type: "PATCH",
@@ -186,7 +186,7 @@ function patchEmployeeII(id) {
 }
 
 function updateForm(id) {
-  var url = `http://127.0.0.1:3000/employees/${id}`;
+  var url = `https://projeto3-yamaha.herokuapp.com/employees/${id}`;
   var res;
 
   var xhttp = new XMLHttpRequest();

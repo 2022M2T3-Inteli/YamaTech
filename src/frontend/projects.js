@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
  $('#postModal').on('shown.bs.modal', function (e) {
-    var url = "http://127.0.0.1:3000/employees/";
+    var url = "https://projeto3-yamaha.herokuapp.com/employees/";
     var res;
 
     var xhttp = new XMLHttpRequest();
@@ -27,23 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function getHome() {
-    window.location.href = "http://localhost:3000/home.html";
+    window.location.href = "https://projeto3-yamaha.herokuapp.com/home.html";
 }
 
 function getEmployees() {
-    window.location.href = "http://localhost:3000/employees.html";
+    window.location.href = "https://projeto3-yamaha.herokuapp.com/employees.html";
 }
 
 function getProjects() {
-    window.location.href = "http://localhost:3000/projects.html";
+    window.location.href = "https://projeto3-yamaha.herokuapp.com/projects.html";
 }
 
 function logOut() {
-    window.location.href = "http://localhost:3000/index.html";
+    window.location.href = "https://projeto3-yamaha.herokuapp.com/index.html";
 }
 
 function getProjectList() {
-    var url = "http://127.0.0.1:3000/projects/";
+    var url = "https://projeto3-yamaha.herokuapp.com/projects/";
     var res;
 
     var xhttp = new XMLHttpRequest();
@@ -116,7 +116,7 @@ function getProjectList() {
 }
 
 function getEmployee(id) {
-    var url = `http://127.0.0.1:3000/employees/${id}`;
+    var url = `https://projeto3-yamaha.herokuapp.com/employees/${id}`;
     var res;
 
     var xhttp = new XMLHttpRequest();
@@ -187,7 +187,7 @@ function includeNew() {
         <button onclick="getAllocationBoxes()">></button>`
     );
 
-    var url = "http://127.0.0.1:3000/employees/";
+    var url = "https://projeto3-yamaha.herokuapp.com/employees/";
     var res;
 
     var xhttp = new XMLHttpRequest();
@@ -219,7 +219,7 @@ function includeNewRegr() {
         <button onclick="includeNewRegr()">></button>`
     );
 
-    var url = "http://127.0.0.1:3000/employees/";
+    var url = "https://projeto3-yamaha.herokuapp.com/employees/";
     var res;
 
     var xhttp = new XMLHttpRequest();
@@ -321,7 +321,7 @@ function postProject() {
     }
     console.log(monthlyAlloc);
     
-    var url = "http://127.0.0.1:3000/projects/";
+    var url = "https://projeto3-yamaha.herokuapp.com/projects/";
 
     $.ajax({
         type: "POST",
@@ -362,7 +362,7 @@ $( function() {
 
 
 function delProject(id) {
-    var url = `http://127.0.0.1:3000/projects/${id}`;
+    var url = `https://projeto3-yamaha.herokuapp.com/projects/${id}`;
 
     var xhttp = new XMLHttpRequest();
     xhttp.open("DELETE", url, false);
@@ -373,7 +373,7 @@ function delProject(id) {
 
 
 function patchProject(id) {
-    var url = `http://127.0.0.1:3000/projects/${id}`;
+    var url = `https://projeto3-yamaha.herokuapp.com/projects/${id}`;
     var res;
   
     var xhttp = new XMLHttpRequest();
@@ -401,7 +401,7 @@ function patchProject(id) {
     var owner = document.getElementById("owner_form_2").value;
     var local = document.getElementById("local_form_2").value;
   
-    var url = "http://127.0.0.1:3000/projects/" + id;
+    var url = "https://projeto3-yamaha.herokuapp.com/projects/" + id;
   
     $.ajax({
       type: "PATCH",
@@ -421,7 +421,7 @@ function patchProject(id) {
 
 
 function updateForm(id) {
-    var url = `http://127.0.0.1:3000/projects/${id}`;
+    var url = `https://projeto3-yamaha.herokuapp.com/projects/${id}`;
     var res;
 
     var xhttp = new XMLHttpRequest();

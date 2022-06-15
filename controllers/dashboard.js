@@ -1,30 +1,56 @@
-import sqlite3 from "sqlite3";
+const sqlite3 = require("sqlite3");
 
-
-//BEGIN OF API REQUEST
-export const getDashboard = (req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Access-Control-Allow-Origin', '*');
-
-    var projects = 'SELECT * FROM projects ORDER BY id';
-    var employees = 'SELECT * FROM employees ORDER BY id';
-
-    var db = new sqlite3.Database("./data/main.db"); // Abre o banco
+module.exports;{
+     getDashboard = (_req, res) => {
+        res.statusCode = 200;
+        res.setHeader('Access-Control-Allow-Origin', '*');
     
-    db.all(projects, [], (err, projs) => {
-        if (err) {
-        throw err;
-        }
+        var projects = 'SELECT * FROM projects ORDER BY id';
+        var employees = 'SELECT * FROM employees ORDER BY id';
+    
+        var db = new sqlite3.Database("./data/main.db"); // Abre o banco
         
-        db.all(employees, [], (err, emps) => {
+        db.all(projects, [], (err, projs) => {
             if (err) {
-                throw err;
+            throw err;
             }
-            res.json([projCapacity(projs), empCapacity(emps)]);
-        })
-    });
-    db.close(); //fecha o banco
+            
+            db.all(employees, [], (err, emps) => {
+                if (err) {
+                    throw err;
+                }
+                res.json([projCapacity(projs), empCapacity(emps)]);
+            })
+        });
+        db.close(); //fecha o banco
+    }
+
+
 }
+//BEGIN OF API REQUEST
+// export const getDashboard = (req, res) => {
+//     res.statusCode = 200;
+//     res.setHeader('Access-Control-Allow-Origin', '*');
+
+//     var projects = 'SELECT * FROM projects ORDER BY id';
+//     var employees = 'SELECT * FROM employees ORDER BY id';
+
+//     var db = new sqlite3.Database("./data/main.db"); // Abre o banco
+    
+//     db.all(projects, [], (err, projs) => {
+//         if (err) {
+//         throw err;
+//         }
+        
+//         db.all(employees, [], (err, emps) => {
+//             if (err) {
+//                 throw err;
+//             }
+//             res.json([projCapacity(projs), empCapacity(emps)]);
+//         })
+//     });
+//     db.close(); //fecha o banco
+// }
 //END OF API REQUEST
 
 

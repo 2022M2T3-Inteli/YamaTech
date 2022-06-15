@@ -1,9 +1,12 @@
-import express from "express";
-import { getDashboard } from "../controllers/dashboard.js"; //commando de chamada para o dashboard
+// const express = require("express");
+// // import { getDashboard } from "../controllers/dashboard.js"; //commando de chamada para o dashboard
 
-const router = express.Router();
+// const getDashboard = require("../controllers/dashboard.js")
 
-//all routes in here are starting with /dashboard
-router.get("/", getDashboard);
+// const router = express.Router();
 
-export default router;
+// //all routes in here are starting with /dashboard
+// router.getAll("/", getDashboard);
+
+// // export default router;
+// module.exports = router;
