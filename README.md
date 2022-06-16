@@ -13,7 +13,7 @@ Yamatech
 ## Integrantes: <a href="https://www.linkedin.com/in/alysson-cordeiro-0684a8236/">Alysson Cordeiro</a>, <a href="https://www.linkedin.com/in/arthur-reis-575532241/">Arthur Reis</a>, <a href="https://www.linkedin.com/in/felipe-sampaio-silva/">Felipe Sampaio</a>, <a href="https://www.linkedin.com/in/leandro-custodio/">Leandro Custodio</a>, <a href="https://www.linkedin.com/in/marcos-florencio-ds/">Marcos Florêncio</a>,<a href="https://www.linkedin.com/in/sarah-ribeiro-361130195/">Sarah Ribeiro</a>,<a href="https://www.linkedin.com/in/kathlyn-diwan-0a0189232/">Kathlyn Diwan</a>
 
 ## Professores Orientadores: <a href="https://www.linkedin.com/in/egondaxbacher/">Egon Daxbacher</a>, <a href="https://www.linkedin.com/in/flaviomarquesazevedo/"> Flavio Azevedo </a>, <a href="https://www.linkedin.com/in/fabiana-martins-de-oliveira-8993b0b2/">Fabiana Martins</a>, <a href="https://www.linkedin.com/in/henrique-mohallem-paiva-6854b460/">Henrique Mohallem</a>, 
-## Nós, do grupo yamatech, gostaríamos de agradecer a todos esses professores por ajudarem não somente para o desenvolvimento desse produto,mas também pela contribuição de nos desenvolverem como profissionais preparados aos desafios futuros.
+## Essa pessoas foram indispensáveis, não somente para a elaboração do produto, mas também pela capacitação e disseminação de conhecimentos técnicos necessários para a elaboração de aplicação Web.
 
 📜 Objetivos da aplicação para ambiente Web-Yamaha Company
 <br><br>
