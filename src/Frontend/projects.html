@@ -167,28 +167,30 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
+                <img class="yamaha-logo" src="img/yamaha_logo.png">
                 <h5 class="modal-title">Inclusão de novo projeto</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="modal_close" data-bs-dismiss="modal"><ion-icon name="close-circle-outline"></ion-icon></button>
             </div>
+            <h3><div class="underline"><span></span></div></h3>
             <div class="modal-body">
                 <form>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Nome:</span>
                         <input name="project_name_form" id="project_name_form" type="text" required>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Responsável:</span>
                         <input name="owner_form" id="owner_form" type="text" required>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Data de início:</span>
                         <input name="begin_date_form" id="begin_date_form" size="3" dateFormat="mm-yy" required>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Data de fim:</span>
                         <input name="finish_date_form" id="finish_date_form" size="3" dateFormat="mm-yy" required>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Distribuição:</span>
                         <select name="timeDistribution" id="timeDistribution" onchange="distrMethod.call(this, event)" type="text" required>
                             <option value="">Selecione</option>
@@ -197,21 +199,30 @@
                             <option value="3">Manual</option>
                         </select>
                     </div>
-                    <div class="input-box" id="employeeSelection">
+
+                    
+                    <div class="input-box-projects" id="employeeSelection">
                         <span>Nome do funcionário:</span>
                         <select name="employees_form_1" id="employees_form_1" type="text" required>
                             <option value="">Selecione</option>
                         </select>
                         <span>Horas alocadas por funcionários:</span>
+                        <div class="emp_allo_hours">
                         <input name="employees_allocated_hours_form_1" id="employees_allocated_hours_form_1" type="text" required>
                         <button id="modalBtn" onclick="getAllocationBoxes()">></button>
+                        </div>
                     </div>
-                    <div class="input-box">
+                    
+
+                    <div class="input-box-projects">
                         <span>Local:</span>
                         <input name="local_form" id="local_form" type="text" required>
                     </div>
-                    <button type="submit" class="btn btn-primary" onclick="postProject()">
+                    <button type="submit" class="btn-modal" onclick="postProject()">
                         Incluir
+                    </button>
+                    <button type="button" data-bs-dismiss="modal" class="btn-modal-cancel" onclick="postEmployee()">
+                        Cancelar
                     </button>
                 </form>
             </div>
