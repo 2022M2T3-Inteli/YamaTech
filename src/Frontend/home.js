@@ -1,8 +1,26 @@
 var a = [
     {
-        'Jun-2022': 390,
-        'Jul-2022': 460,
-        'Aug-2022': 250 
+        // "Jul": 400,
+        // "Ago": 700,
+        // "Set": 350,
+        // "Out": 790,
+        // "Nov": 650,
+        // "Dez": 555,
+        // "Jan": 230,
+        // "Fev": 110,
+        // "Mar": 800,
+        // "Abr": 500
+
+        "Jan": 400,
+        "Fev": 700,
+        "Mar": 350,
+        "Abr": 790,
+        "Jun": 650,
+        "Jul": 555,
+        "Ago": 230,
+        "Out": 110,
+        "Nov": 800,
+        "Dez": 500
     },
     {
         "legal_hours": 704,
@@ -10,6 +28,7 @@ var a = [
         "allocated_hours": 365
     }
 ]
+
 
 
 function hours(){
@@ -84,6 +103,10 @@ gradient.addColorStop(1, "rgba(0, 100, 255, .3)")
 
 
 //Chart 1 --> gráfico referente ao limite de horas disponiveis, horas necessárias por projetos etc
+function grafico(teste) {
+
+
+}
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -194,5 +217,7 @@ const myChart2 = new Chart(ctx2, {
             return delay;
         },
        },
-    },       
+    },
+    
+            
 });
