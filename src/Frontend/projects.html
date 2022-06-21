@@ -22,21 +22,24 @@
                 <ion-icon class="home-icon" name="home"></ion-icon>
                 <span></span>
                 Home
+                
             </div>
             <div onclick="getEmployees()">
                 <ion-icon class="people-icon" name="people"></ion-icon>
                 <span></span>
                 Pessoas
+                
             </div>
             <div onclick="getProjects()">
                 <ion-icon class="projects-icon" name="construct"></ion-icon>
                 <span></span>
                 Projetos
+                
             </div>
         </div>
         <div class="exit-link" onclick="logOut()">
             <div>
-                <ion-icon class="exit-icon" name="exit"></ion-icon>
+                <a href="index.html"><ion-icon class="exit-icon" name="exit"></ion-icon></a>
                 <span></span>
             </div>
         </div>
@@ -50,8 +53,8 @@
 
     <div class="grid-container-1">
         <!-- begin of DOUGHNUT CHART -->
-        <div>
-            <canvas class="doughnut-chart" id="doughnutChart"></canvas>
+        <div class="top_card2">
+            <h3>Projetos</h3>
         </div>
         <!-- end of DOUGHNUT CHART -->
         <!-- begin of PROJECTS CARDS -->
@@ -66,6 +69,7 @@
                 <div class="icons-3">
                     <p>Total de projetos</p>
                 </div>
+                <p class="placeholder">placeholder</p>
             </div>
             <div class="icons">
                 <div class="icons-1">
@@ -77,6 +81,7 @@
                 <div class="icons-3">
                     <p>Horas planejadas</p>
                 </div>
+                <p class="placeholder">placeholder</p>
             </div>
             <div class="icons">
                 <div class="icons-1">
@@ -87,7 +92,9 @@
                 </div>
                 <div class="icons-3">
                     <p>Funcionários alocados</p>
+                    
                 </div>
+                <p class="placeholder">placeholder</p>
             </div>
             
         </div>
@@ -167,11 +174,10 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <img class="yamaha-logo" src="img/yamaha_logo.png">
-                <h5 class="modal-title">Inclusão de novo projeto</h5>
+                <h5 class="modal-title">Adicionar projeto</h5>
                 <button type="button" class="modal_close" data-bs-dismiss="modal"><ion-icon name="close-circle-outline"></ion-icon></button>
             </div>
-            <h3><div class="underline"><span></span></div></h3>
+           
             <div class="modal-body">
                 <form>
                     <div class="input-box-projects">
@@ -180,7 +186,10 @@
                     </div>
                     <div class="input-box-projects">
                         <span>Responsável:</span>
-                        <input name="owner_form" id="owner_form" type="text" required>
+                        <select name="owner_form" id="owner_form" type="text" required>
+                            <option>Selecione</option>
+                            <option value="SP">Gerente</option>
+                        </select>
                     </div>
                     <div class="input-box-projects">
                         <span>Data de início:</span>
@@ -200,8 +209,8 @@
                         </select>
                     </div>
 
-                    
-                    <div class="input-box-projects" id="employeeSelection">
+                    <div id="employeeSelection">
+                    <div class="input-box-projects" >
                         <span>Nome do funcionário:</span>
                         <select name="employees_form_1" id="employees_form_1" type="text" required>
                             <option value="">Selecione</option>
@@ -212,11 +221,19 @@
                         <button id="modalBtn" onclick="getAllocationBoxes()">></button>
                         </div>
                     </div>
+                    </div>
                     
 
                     <div class="input-box-projects">
                         <span>Local:</span>
-                        <input name="local_form" id="local_form" type="text" required>
+                        <select name="local_form" id="local_form" type="text" required>
+                            <option>Selecione</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="AM">Amazonas</option>
+                        </select>
+
+                        <!--<input  id="local_form" type="text" required>-->
+
                     </div>
                     <button type="submit" class="btn-modal" onclick="postProject()">
                         Incluir
@@ -237,21 +254,29 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Alteração de dados cadastrais</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="modal_close" data-bs-dismiss="modal"><ion-icon name="close-circle-outline"></ion-icon></button>
             </div>
+           
             <div class="modal-body">
                 <form>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Nome:</span>
                         <input name="project_name_form_2" id="project_name_form_2" type="text" required>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Responsável:</span>
-                        <input name="owner_form_2" id="owner_form_2" type="text" required>
+                        <select name="owner_form_2" id="owner_form_2" type="text" required>
+                            <option>Selecione</option>
+                            <option value="SP">Gerente</option>
+                        </select>
                     </div>
-                    <div class="input-box">
+                    <div class="input-box-projects">
                         <span>Local de trabalho:</span>
-                        <input name="local_form_2" id="local_form_2" type="text" required>
+                        <select name="local_form_2" id="local_form_2" type="text" required>
+                            <option>Selecione</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="AM">Amazonas</option>
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-primary" id="patchButton" onclick="patchProjectII()">
                         Alterar

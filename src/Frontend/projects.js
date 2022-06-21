@@ -156,12 +156,18 @@ function getAllocationBoxes() {
     for (i=0; i < months; i++) {
         $("#employeeSelection").append(
             `<span>Mês ${i+1}:</span>
-            <input name="id_${employeeCount}_employees_form_${i}" id="id_${employeeCount}_employees_form_${i}" type="text" required>`
+            <br>
+            <input name="id_${employeeCount}_employees_form_${i}" id="id_${employeeCount}_employees_form_${i}" type="text" required style="width: 400px;
+            border: 1px solid var(--dark-main-color);
+            height: 35px;
+            border-radius: 5px;
+            margin-top: 6px;">
+            <br>`
         );
     }
 
     $("#employeeSelection").append(
-        `<button type="button" onclick="includeNew()">Incluir Novo</button>
+        `<button class="new-item" type="button" onclick="includeNew()">Incluir Novo Funcionário +</button>
         </div>`
     );
 }
@@ -178,13 +184,31 @@ function distrMethod(event) {
 function includeNew() {
     employeeCount++;
     $("#employeeSelection").append(
-        `<span>Nome do funcionário:</span>
-        <select name="employees_form_${employeeCount}" id="employees_form_${employeeCount}" type="text" required>
+        `
+        <div class="input-box-projects" >
+        <span>Nome do funcionário:</span>
+        <select name="employees_form_${employeeCount}" id="employees_form_${employeeCount}" type="text" required style="width: 400px;
+        border: 1px solid var(--dark-main-color);
+        height: 35px;
+        border-radius: 5px;
+        margin-top: 6px;">
             <option value="">Selecione</option>
         </select>
         <span>Horas alocadas por funcionários:</span>
+
+        <div style="display: flex;">
         <input name="employees_allocated_hours_form_${employeeCount}" id="employees_allocated_hours_form_${employeeCount}" type="text" required>
-        <button onclick="getAllocationBoxes()">></button>`
+        <button style="margin-left: -29px;
+        width: 30px;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        background-color: var(--dark-main-color);
+        color: #fff;
+        transition: .3s;
+        height: 35px;
+        float: right;" onclick="getAllocationBoxes()">></button>
+        </div>
+        </div>`
     );
 
     var url = "http://127.0.0.1:3000/employees/";
@@ -210,13 +234,38 @@ function includeNew() {
 function includeNewRegr() {
     employeeCount++;
     $("#employeeSelection").append(
-        `<span>Nome do funcionário:</span>
-        <select name="employees_form_${employeeCount}" id="employees_form_${employeeCount}" type="text" required>
+        `
+        <div class="input-box-projects" >
+        <span>Nome do funcionário:</span>
+        <select name="employees_form_${employeeCount}" id="employees_form_${employeeCount}" type="text" style="width: 400px;
+        border: 1px solid var(--dark-main-color);
+        height: 35px;
+        border-radius: 5px;
+        margin-top: 6px;" required>
             <option value="">Selecione</option>
         </select>
+        
+        
         <span>Horas alocadas por funcionários:</span>
-        <input name="employees_allocated_hours_form_${employeeCount}" id="employees_allocated_hours_form_${employeeCount}" type="text" required>
-        <button onclick="includeNewRegr()">></button>`
+
+        <div class="emp_allo_hours">
+        <input name="employees_allocated_hours_form_${employeeCount}" id="employees_allocated_hours_form_${employeeCount}" type="text" style=" width: 400px;
+        border: 1px solid var(--dark-main-color);
+        height: 35px;
+        border-radius: 5px;" required>
+        
+
+        <button style="margin-left: -29px;
+        width: 30px;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        background-color: var(--dark-main-color);
+        color: #fff;
+        transition: .3s;
+        height: 35px;" onclick="includeNewRegr()">></button>
+        </div>
+        </div>
+        `
     );
 
     var url = "http://127.0.0.1:3000/employees/";
