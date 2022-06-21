@@ -1,121 +1,96 @@
-var a = [
-    {
-        // "Jul": 400,
-        // "Ago": 700,
-        // "Set": 350,
-        // "Out": 790,
-        // "Nov": 650,
-        // "Dez": 555,
-        // "Jan": 230,
-        // "Fev": 110,
-        // "Mar": 800,
-        // "Abr": 500
-
-        "Jan": 400,
-        "Fev": 700,
-        "Mar": 350,
-        "Abr": 790,
-        "Jun": 650,
-        "Jul": 555,
-        "Ago": 230,
-        "Out": 110,
-        "Nov": 800,
-        "Dez": 500
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      getDashboard();
     },
-    {
-        "legal_hours": 704,
-        "total_hours": 550,
-        "allocated_hours": 365
+    false
+  );
+
+
+var json = getDashboard();
+function getDashboard() {
+    var url = "http://127.0.0.1:3000/dashboard/";
+    var res;
+  
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send(); //A execução do script pára aqui até a requisição retornar do servidor
+  
+    res = JSON.parse(xhttp.responseText);
+
+    return res
+}
+
+
+function changeGetHttp(res) {
+    var keys = [];
+    var values = [];
+
+    for (let i in res[0]) {
+      keys.push(i);
     }
-]
-
-
-
-function hours(){
-    var hours = [];
-    hours = (a[0]);
-    return hours;
-}
-
-
-
-function legal_hours() {
-var lhours = [];
-
-var labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
-var array = '[';
-for (let i=0; i < labels.length; i++) {
-    lhours.push(a[1]["legal_hours"]);
-    if(i == labels.length-1)    array += a[1]["legal_hours"] + ']';
-    else array += a[1]["legal_hours"] + ',';
-    console.log(a[1]["legal_hours"]);
-    }
-    console.log(array);
-    return lhours;
-}
-
-function total_hours() {
-    var thours = [];
-//labels identificados no gráfico de horas totais por mês, com uma visão macro 
-    var labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
-    var array = '[';
-    for (let i=0; i < labels.length; i++) {
-        thours.push(a[1]["total_hours"]);
-        if(i == labels.length-1)    array += a[1]["total_hours"] + ']';
-        else array += a[1]["total_hours"] + ',';
-        console.log(a[1]["total_hours"]);
-        }
-        console.log(array);
-        return thours;
-}
-
-function allocated_hours() {
-    var ahours = [];
-
-    var labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
-    var array = '[';
-    for (let i=0; i < labels.length; i++) {
-        ahours.push(a[1]["allocated_hours"]);
-        if(i == labels.length-1)    array += a[1]["allocated_hours"] + ']';
-        else array += a[1]["allocated_hours"] + ',';
-        console.log(a[1]["allocated_hours"]);
-        }
-        console.log(array);
-        return ahours;
+    keys.unshift(keys.pop());
     
+    Object.entries(res[0]).forEach(([key, value]) => {
+    values.push(`${value}`);
+    });
+    values.unshift(values.pop());
+    
+    return [keys, values];
+}
+    
+    
+function calculate_months(res) {
+    for (let i=0; i < res.length; i++) {
+        res[i] = `${res[i].substring(4, 7)}-${res[i].substring(11, 15)}`;
+    }
+    return res;
 }
 
 
-allocated_hours();
-total_hours();
-legal_hours();
+function calculate_hours(hours, res) {
+    var tmp = [];
+    var labels = calculate_months(changeGetHttp(res)[0]);
+    var array = '[';
 
+    for (let i=0; i <= labels.length; i++) {
+        tmp.push(res[1][hours]);
+        if (i == labels.length) {
+            array += res[1][hours] + ']'
+        } else {
+            array += res[1][hours] + ','
+        }
+    }
+    return tmp;
+}
+
+function monthConverter(res) {
+    var tmp = changeGetHttp(res)[1];
+    for (let i=0; i < tmp.length; i++) {
+        tmp[i] = parseInt(tmp[i]);
+    }
+    return tmp;
+  }
 
 const ctx = document.getElementById('myChart').getContext('2d');
 const ctx2 = document.getElementById('myChart2').getContext('2d');
 
 let delayed;
 
-// Gradient color
+// begin of EXHAUSTION CHART
 let gradient = ctx.createLinearGradient(0, 0, 0, 400);
 gradient.addColorStop(0, "rgb(1, 1, 1) ");
 gradient.addColorStop(1, "rgba(0, 100, 255, .3)")
 
-
-//Chart 1 --> gráfico referente ao limite de horas disponiveis, horas necessárias por projetos etc
-function grafico(teste) {
-
-
-}
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
         type: 'line',
-        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        labels: calculate_months(changeGetHttp(json)[0]),
         datasets: [{
-        label: 'Limite de Horas Legalizadas',
+        label: 'Limite Legal',
             type: 'line',
-            data: legal_hours(),
+            data: calculate_hours("legal_hours", json),
             backgroundColor: "rgb(255,0,0)",
             fill: false,
             borderColor: 'rgb(255, 0, 0)',
@@ -124,9 +99,9 @@ const myChart = new Chart(ctx, {
 
         },
         {
-            label: 'Total de Horas',
+            label: 'Limite Total',
                 type: 'line',
-                data: total_hours(),
+                data: calculate_hours("total_hours", json),
                 backgroundColor: "rgb(0, 250, 20)",
                 fill: false,
                 borderColor: 'rgb(0, 250, 20)',
@@ -135,9 +110,9 @@ const myChart = new Chart(ctx, {
                
         },
         {
-            label: 'Horas Alocadas',
+            label: 'Limite funcional',
                 type: 'line',
-                data: allocated_hours(),
+                data: calculate_hours("allocated_hours", json),
                 backgroundColor: 'rgb(256, 200, 0)',
                 fill: false,
                 borderColor: 'rgb(256, 200, 0)',
@@ -146,8 +121,8 @@ const myChart = new Chart(ctx, {
                
         },
         {
-        label: 'Horas Necessárias Por Projetos',
-            data: hours(),
+        label: 'Horas Alocadas',
+            data: monthConverter(json),
             backgroundColor: [
                 'rgba(54,120,230,1)',
             ],
@@ -186,16 +161,16 @@ const myChart = new Chart(ctx, {
     },
     
 });
+//end of EXHAUSTION CHART
 
-
-//Chart 2
+//begin of SECOND CHART
 const myChart2 = new Chart(ctx2, {
     type: 'bar',
     data: {
-        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+        labels: calculate_months(changeGetHttp(json)[0]),
         datasets: [{
             label: 'Horas Necessárias Por Projetos',
-            data: hours(),
+            data: monthConverter(json),
             backgroundColor: [
                 'rgba(54,120,230,1)',
             ],
@@ -217,7 +192,6 @@ const myChart2 = new Chart(ctx2, {
             return delay;
         },
        },
-    },
-    
-            
+    },          
 });
+//end of SECOND CHART
