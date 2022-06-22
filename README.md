@@ -1,7 +1,7 @@
 # Inteli - Instituto de Tecnologia e Liderança 
 
 <p align="center">
-<a href= "https://www3.yamaha-motor.com.br/"><img src="https://adalove.inteli.edu.br/newada-img/groups/c1503ec9-20d3-4fb7-b4cd-3afd12f57c37.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://www.gazetanewsguarulhos.com.br/"><img src="https://www.gazetanewsguarulhos.com.br/inteli-anuncia-patrocinio-do-w7m-gaming/" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
 # Gerenciador e Alocador de Capacity
