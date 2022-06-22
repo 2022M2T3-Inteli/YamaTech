@@ -42,13 +42,11 @@ T3_G3_V01_Web_application_document.pdf
 
 Faça o mesmo para a documentação em formato DOCX.
 ```
-<ul>
- 📁 Projeto3
-     <p>📁 controlers  <br>
-       <li> &emsp; dashboard.js<br> </li>
-       <li> &emsp; employees.js<br> </li>
-       <li> &emsp; projects.js<br> </li>
-</ul>
+<li> 📁 Projeto3 </li>
+    <li style="margin-left: 15px;"> 📁 controlers</li>
+        <li style="margin-left: 40px;">dashboard.js<br> </li>
+        <li style="margin-left: 40px;">employees.js<br> </li>
+        <li style="margin-left: 40px;">projects.js<br> </li>
     
      
   |--> 📁 data <br>
