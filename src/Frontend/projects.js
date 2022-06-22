@@ -82,6 +82,8 @@ function getProjectList() {
                     </button>
                 </div>`
         );
+        document.getElementById('total').innerHTML = res.length;
+
     }
 
     document.getElementById("id").innerHTML = res[0].id;

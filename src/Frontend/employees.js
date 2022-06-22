@@ -59,7 +59,7 @@ function getEmployeesList() {
                     </button>
                 </div>`
     );
-    //document.getElementById('pessoaltotal').innerHTML = res.length;
+    document.getElementById('totalPeople').innerHTML = res.length;
 
   } 
 
