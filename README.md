@@ -1,24 +1,25 @@
 # Inteli - Instituto de Tecnologia e Liderança 
 
 <p align="center">
-<a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://www3.yamaha-motor.com.br/"><img src="https://www3.yamaha-motor.com.br/file/v3041547111350393858/products/30050-todo-terreno-crosser-150-z-faixa05-v01-yamaha.jpg" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do projeto
+# Gerenciador e Alocador de Capacity
 
 ## Nome do grupo
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/alysson-cordeiro-0684a8236/">Alysson Cordeiro</a>
+- <a href="https://www.linkedin.com/in/arthur-reis-575532241/">Arthur Reis</a>
+- <a href="https://www.linkedin.com/in/felipe-sampaio-silva">Felipe Sampaio</a> 
+- <a href="https://www.linkedin.com/in/kathlyn-diwan-0a0189232/">Kathlyn Diwan</a> 
+- <a href="https://www.linkedin.com/in/leandro-custodio/">Leandro Custódio</a>
+- <a href="https://www.linkedin.com/in/marcos-florencio-ds/">Marcos Florencio</a> 
+- <a href="https://www.linkedin.com/in/sarah-ribeiro-361130195/">Sarah Ribeiro</a>
 
 ## 📝 Descrição
 
+O propósito do sistema Web é realizar a alocação de funcionários em projetos da Yamaha e apresentar uma análise geral da situação de desenvolvimento em cada projeto. O site será utilizado por um gestor de projetos para cadastro de projetos, funcionários e consulta de dados nos dashboards. Também, há a possibilidade de selecionar distribuições personalizadas ao cadastrar um projeto com um modelo de distribuição pré-definido, sem necessidade de alocação manual. 
 Curta descrição sobre o que o seu projeto faz (problema a ser resolvido e solução proposta).
 
 ## 📁 Estrutura de pastas
