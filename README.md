@@ -1,7 +1,7 @@
 # Inteli - Instituto de Tecnologia e Liderança 
 
 <p align="center">
-<a href= "https://www3.yamaha-motor.com.br/"><img src="https://www3.yamaha-motor.com.br/file/v3041547111350393858/products/30050-todo-terreno-crosser-150-z-faixa05-v01-yamaha.jpg" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://www3.yamaha-motor.com.br/"><img src="https://adalove.inteli.edu.br/newada-img/groups/c1503ec9-20d3-4fb7-b4cd-3afd12f57c37.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
 # Gerenciador e Alocador de Capacity
@@ -20,7 +20,6 @@
 ## 📝 Descrição
 
 O propósito do sistema Web é realizar a alocação de funcionários em projetos da Yamaha e apresentar uma análise geral da situação de desenvolvimento em cada projeto. O site será utilizado por um gestor de projetos para cadastro de projetos, funcionários e consulta de dados nos dashboards. Também, há a possibilidade de selecionar distribuições personalizadas ao cadastrar um projeto com um modelo de distribuição pré-definido, sem necessidade de alocação manual. 
-Curta descrição sobre o que o seu projeto faz (problema a ser resolvido e solução proposta).
 
 ## 📁 Estrutura de pastas
 
