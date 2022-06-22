@@ -248,22 +248,14 @@ function includeNewRegr() {
         
         <span>Horas alocadas por funcionários:</span>
 
-        <div class="emp_allo_hours">
+        
         <input name="employees_allocated_hours_form_${employeeCount}" id="employees_allocated_hours_form_${employeeCount}" type="text" style=" width: 400px;
         border: 1px solid var(--dark-main-color);
         height: 35px;
         border-radius: 5px;" required>
         
 
-        <button style="margin-left: -29px;
-        width: 30px;
-        border-radius: 0 5px 5px 0;
-        border: none;
-        background-color: var(--dark-main-color);
-        color: #fff;
-        transition: .3s;
-        height: 35px;" onclick="includeNewRegr()">></button>
-        </div>
+        <button class="new-item" type="button" onclick="includeNewRegr()">Incluir Novo Funcionário +</button>
         </div>
         `
     );
