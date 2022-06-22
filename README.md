@@ -1,7 +1,7 @@
 # Inteli - Instituto de Tecnologia e Liderança 
 
 <p align="center">
-<a href= "https://www.gazetanewsguarulhos.com.br/"><img src="https://images.app.goo.gl/5bymKr8i6V6MDN6W8" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://www.gazetanewsguarulhos.com.br/inteli-anuncia-patrocinio-do-w7m-gaming/"><img src="https://www.gazetanewsguarulhos.com.br/inteli-anuncia-patrocinio-do-w7m-gaming/" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
 # Gerenciador e Alocador de Capacity
