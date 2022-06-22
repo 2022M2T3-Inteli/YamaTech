@@ -43,30 +43,32 @@ T3_G3_V01_Web_application_document.pdf
 Faça o mesmo para a documentação em formato DOCX.
 ```
 
-<ul> 📁 Projeto</ul>
-  |--> controlers <br>
-     &emsp;| dashboard.js
-     &emsp;| employees.js
-     &emsp;| projects.js
+<ul> 📁 Projeto</ul><br>
+  <ul> controlers<br> </ul>
+     <ul>
+     &emsp;| dashboard.js<br>
+     &emsp;| employees.js<br>
+     &emsp;| projects.js<br>
+    </ul>
      
   |--> 📁 data <br>
-    &emsp;| main.db
+    &emsp;| main.db<br>
  
   |--> 📁 documentos <br>
-    &emsp;| testes_funcionalidades.pdf
-    &emsp;| wad.pdf
+    &emsp;| testes_funcionalidades.pdf<br>
+    &emsp;| wad.pdf <br>
     
-  |--> 📁 node modules <br>
+  |--> 📁 node modules<br>
   
   |--> 📁 routes <br>
-    &emsp;| dashboard.js
-    &emsp;| employees.js
-    &emsp;| projects.js
+    &emsp;| dashboard.js<br>
+    &emsp;| employees.js<br>
+    &emsp;| projects.js<br>
     
-  |--> 📁 src <br>
+  |--> 📁 src<br>
   
   | readme.md<br>
-  | license.txt
+  | license.txt<br>
   
   
   &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.docx<br>
