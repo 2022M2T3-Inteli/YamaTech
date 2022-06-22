@@ -31,19 +31,10 @@ O propósito do sistema Web é realizar a alocação de funcionários em projeto
 
 ## 📁 Estrutura de pastas
 
-```
-Alunos inteli (remover essa observação do readme.md após leitura e execução):
-
-Supondo que você é da Turma 4 e Projeto 5, substitua:
-
-T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf
-por
-T3_G3_V01_Web_application_document.pdf
-
-Faça o mesmo para a documentação em formato DOCX.
-```
 Projeto 3<br>
   &emsp;| controlers <br>
+  &emsp;|--> pakage-lock.json<br>
+  
   &emsp;| data<br>
   &emsp;| documentos<br>
   &emsp;| imagens<br>
@@ -58,8 +49,6 @@ Projeto 3<br>
 |--> teste.js<br>
 
   
-  
-
 
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
