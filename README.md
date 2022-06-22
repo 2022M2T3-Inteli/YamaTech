@@ -43,13 +43,28 @@ T3_G3_V01_Web_application_document.pdf
 Faça o mesmo para a documentação em formato DOCX.
 ```
 
-<ul> Projeto</ul>
+<ul> 📁 Projeto</ul>
   |--> controlers <br>
-  |--> data <br>
-  |--> documentos <br>
-  |--> node modules <br>
-  |--> routes <br>
-  |--> src <br>
+     &emsp;| dashboard.js
+     &emsp;| employees.js
+     &emsp;| projects.js
+     
+  |--> 📁 data <br>
+    &emsp;| main.db
+ 
+  |--> 📁 documentos <br>
+    &emsp;| testes_funcionalidades.pdf
+    &emsp;| wad.pdf
+    
+  |--> 📁 node modules <br>
+  
+  |--> 📁 routes <br>
+    &emsp;| dashboard.js
+    &emsp;| employees.js
+    &emsp;| projects.js
+    
+  |--> 📁 src <br>
+  
   | readme.md<br>
   | license.txt
   
