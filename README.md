@@ -43,9 +43,17 @@ T3_G3_V01_Web_application_document.pdf
 Faça o mesmo para a documentação em formato DOCX.
 ```
 
-|--> documentos<br>
-  &emsp;| --> outros <br>
-  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf<br>
+<ul> Projeto</ul>
+  |--> controlers <br>
+  |--> data <br>
+  |--> documentos <br>
+  |--> node modules <br>
+  |--> routes <br>
+  |--> src <br>
+  | readme.md<br>
+  | license.txt
+  
+  
   &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.docx<br>
 |--> imagens<br>
 |--> src<br>
