@@ -33,7 +33,7 @@ O propósito do sistema Web é realizar a alocação de funcionários em projeto
 
 Projeto 3<br>
   &emsp;| controlers <br>
-  &emsp;|--> pakage-lock.json<br>
+  &emsp;&emsp;|--> pakage-lock.json<br>
   
   &emsp;| data<br>
   &emsp;| documentos<br>
