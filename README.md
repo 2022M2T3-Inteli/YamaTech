@@ -25,6 +25,10 @@
 
 O propósito do sistema Web é realizar a alocação de funcionários em projetos da Yamaha e apresentar uma análise geral da situação de desenvolvimento em cada projeto. O site será utilizado por um gestor de projetos para cadastro de projetos, funcionários e consulta de dados nos dashboards. Também, há a possibilidade de selecionar distribuições personalizadas ao cadastrar um projeto com um modelo de distribuição pré-definido, sem necessidade de alocação manual. 
 
+<p align="center">
+<a href= "https://adalove.inteli.edu.br/#"><img src="https://adalove.inteli.edu.br/newada-img/groups/c1503ec9-20d3-4fb7-b4cd-3afd12f57c37.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+</p>
+
 ## 📁 Estrutura de pastas
 
 ```
@@ -34,7 +38,7 @@ Supondo que você é da Turma 4 e Projeto 5, substitua:
 
 T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf
 por
-T4_G5_V01_Web_application_document.pdf
+T3_G3_V01_Web_application_document.pdf
 
 Faça o mesmo para a documentação em formato DOCX.
 ```
