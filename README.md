@@ -42,40 +42,24 @@ T3_G3_V01_Web_application_document.pdf
 
 Faça o mesmo para a documentação em formato DOCX.
 ```
-<li> 📁 Projeto3 </li>
-    &emsp; <li style="margin-left: 15px;"> 📁 controlers</li>
-    &emsp;&emsp;<li style="margin-left: 40px;">dashboard.js<br> </li>
-        <li style="margin-left: 40px;">employees.js<br> </li>
-        <li style="margin-left: 40px;">projects.js<br> </li>
-    
-     
-  |--> 📁 data <br>
-    &emsp;| main.db<br>
- 
-  |--> 📁 documentos <br>
-    &emsp;| testes_funcionalidades.pdf<br>
-    &emsp;| wad.pdf <br>
-    
-  |--> 📁 node modules<br>
-  
-  |--> 📁 routes <br>
-    &emsp;| dashboard.js<br>
-    &emsp;| employees.js<br>
-    &emsp;| projects.js<br>
-    
-  |--> 📁 src<br>
-  
-  | readme.md<br>
-  | license.txt<br>
+Projeto 3<br>
+  &emsp;| controlers <br>
+  &emsp;| data<br>
+  &emsp;| documentos<br>
+  &emsp;| imagens<br>
+  &emsp;| node_modules<br>
+  &emsp;| routes<br>
+  &emsp;| src<br>
+<br>
+|--> app.js<br>
+|--> pakage-lock.json<br>
+|--> pakage.json<br>
+|--> README.md<br>
+|--> teste.js<br>
+
   
   
-  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.docx<br>
-|--> imagens<br>
-|--> src<br>
-  &emsp;|--> Backend<br>
-  &emsp;|--> Frontend<br>
-| readme.md<br>
-| license.txt
+
 
 Dentre os arquivos presentes na raiz do projeto, definem-se:
 
