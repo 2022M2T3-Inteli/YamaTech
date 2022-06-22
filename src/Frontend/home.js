@@ -133,9 +133,9 @@ const myChart = new Chart(ctx, {
             label: 'Limite funcional',
                 type: 'line',
                 data: calculate_hours("allocated_hours", json),
-                backgroundColor: 'rgb(256, 200, 0)',
+                backgroundColor: '#003e9f',
                 fill: false,
-                borderColor: 'rgb(256, 200, 0)',
+                borderColor: '#003e9f',
                 pointBackgroundColor: "rgba(0,0,0,0)",
                 pointBorderColor: "rgba(0,0,0,0)"
                

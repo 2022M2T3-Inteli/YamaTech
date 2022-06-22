@@ -7,6 +7,7 @@
     --secondary-color: #0729d8;
     --light-secondary-color: #7096d1;
     --terciary-color: white;
+    --red-color: #D30417;
 }   
 
 
@@ -17,9 +18,10 @@
     box-sizing: border-box;
 }
 
+
 body {
     background: linear-gradient(136deg, var(--terciary-color), var(--light-main-color));
-    height: 100vh;
+    height: 115vh;
     padding-left: 8vw;
 }
 
@@ -101,7 +103,6 @@ body {
 }
 
 .home-icon {
-    color: var(--red-color);
     width: 22px;
     height: 22px;
     object-fit: scale-down;
@@ -116,7 +117,9 @@ body {
 .exit-link:hover {
     color: var(--light-main-color);
 }
-
+.active{
+    color: var(--red-color);
+}
 .exit-link {
     position: absolute;
     bottom: 0;
@@ -150,6 +153,24 @@ body {
     width: 100%;
     height: 100%;
     background: green;
+}
+
+.top_card{
+    height: 180px;
+    width: 360px;
+    background:
+    linear-gradient(
+      rgba(1, 20, 192, 0.724),rgba(255, 255, 255, 0)
+    ),
+    url("./img/moto.jpg") no-repeat;
+    background-size: 380px;
+    border-radius: 10px;
+}
+.top_card h3{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 45px;
+    color: #fff;
 }
 
 /* begin of PROJECTS CARDS*/
@@ -196,13 +217,18 @@ body {
 .icons-3 {
     height: 4vh;
 }
+.placeholder{
+    color: orange;
+    font-size: 8px;
+    text-align: center;
+    padding-bottom: 5px;
+    float: right;
+}
 /* end of PROJECTS CARDS*/
 
 /* begin of PROJECT DETAILS */
 .grid-container-2-0 {
-    border: 3px solid var(--light-main-color);
     background: var(--terciary-color);
-    border-radius: 6px;
     padding: 10px;
     position: relative;
 }
@@ -221,11 +247,11 @@ body {
     flex: 1;
     color: var(--terciary-color);
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
-    font-weight: 800;
+    font-weight: 400;
     font-size: 20px;
     align-items: center;
     justify-content: center;
-    background: var(--light-secondary-color);
+    background: var(--dark-main-color);
     border-radius: 4px;
 }
 
@@ -252,7 +278,7 @@ body {
     align-items: center;
     flex: 3;
     font-size: 16px;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .grid-container-2-0-1-1,
@@ -301,7 +327,7 @@ body {
     display: block;
     height: fit-content;
     max-height: 30%;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .grid-container-2-0-3-1,
@@ -378,6 +404,7 @@ body {
     width: 8vw !important;
     color: var(--terciary-color) !important;
     background: var(--light-secondary-color) !important;
+    padding: 2px 0;
 }
 
 .btn-primary:hover {
@@ -391,19 +418,18 @@ body {
 /* end of PROJECT DETAILS */
 /* begin of PROJECT LIST */
 .grid-container-2-1 {
-    border: 3px solid var(--light-main-color);
+    
     background: var(--terciary-color);
-    border-radius: 6px;
     padding: 10px;
     position: relative;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .grid-container-2-1-0,
 .grid-container-2-1-1 {
     display: flex;
     flex-direction: row;
-    height: 8%;
+    height: 40px;
     margin-bottom: 5px;
     cursor: pointer;
 }
@@ -412,11 +438,11 @@ body {
     flex: 1;
     color: var(--terciary-color);
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
-    font-weight: 800;
+    font-weight: 400;
     font-size: 20px;
     align-items: center;
     justify-content: center;
-    background: var(--light-secondary-color);
+    background: var(--dark-main-color);
     border-radius: 4px;
 }
 
@@ -484,6 +510,7 @@ body {
 .modal-body {
     display: block !important;
     margin: auto;
+    overflow-y: scroll;
 }
 .btn-modal{
     margin-top: 4px;
@@ -527,8 +554,15 @@ body {
 .input-box input{
     width: 400px;
     border: 1px solid var(--dark-main-color);
-    height: 28px;
+    height: 35px;
     border-radius: 5px;
+}
+.input-box select{
+    width: 400px;
+    border: 1px solid var(--dark-main-color);
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 6px;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -569,45 +603,7 @@ input[type=number]::-webkit-outer-spin-button {
 .modal_close:hover ion-icon{
     color: var(--light-secondary-color);
 }
-.underline{
-    margin-top: 20px;
-    width: 492px;
-    height: 5px;
-    background: #414141;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    overflow: hidden;
-}
-.underline span{
-    width: 100px;
-    height: 100%;
-    background-color: #7096d1;
-    position: 3px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    animation: moving 3s linear infinite;
-}
-@keyframes moving{
-    0%{
-        left: -20px;
-    }
-    100%{
-        left: 100%;
-    }
-}
-@media (max-width: 700px){
-    footer{
-        bottom: unset;
-    }
-    .col{
-        flex-basis: 100%;
-    }
-    .col:nth-child(2), .col:nth-child(3){
-        flex-basis: 100%;
-    }
-}
+
 /* end of MODAL */
 
 /* end of SCREEN GRID */

@@ -7,6 +7,7 @@
     --secondary-color: #0729d8;
     --light-secondary-color: #7096d1;
     --terciary-color: white;
+    --red-color: #D30417;
 }
 
 
@@ -19,7 +20,7 @@
 
 body {
     background: linear-gradient(136deg, var(--terciary-color), var(--light-main-color));
-    height: 100vh;
+    height: 120vh;
     padding-left: 8vw;
 }
 
@@ -49,7 +50,9 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.active{
+    color: var(--red-color);
+}
 .sidebar-link,
 .exit-link {
     color: var(--terciary-color);
@@ -103,7 +106,6 @@ body {
 }
 
 .home-icon {
-    color: var(--red-color);
     width: 22px;
     height: 22px;
     object-fit: scale-down;
@@ -118,7 +120,9 @@ body {
 .exit-link:hover {
     color: var(--light-main-color);
 }
-
+.active{
+    color: var(--red-color);
+}
 .exit-link {
     position: absolute;
     bottom: 0;
@@ -160,7 +164,23 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+.top_card2{
+    height: 180px;
+    width: 360px;
+    background:
+    linear-gradient(
+      rgba(1, 20, 192, 0.724),rgba(255, 255, 255, 0)
+    ),
+    url("./img/moto2.jpg") no-repeat;
+    background-size: 380px;
+    border-radius: 10px;
+}
+.top_card2 h3{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 45px;
+    color: #fff;
+}
 .icons {
     flex: 1;
     height: 32vh;
@@ -197,14 +217,20 @@ body {
 }
 .icons-3 {
     height: 4vh;
+    text-align: center;
+}
+.placeholder{
+    color: orange;
+    font-size: 8px;
+    text-align: center;
+    padding-bottom: 5px;
+    float: right;
 }
 /* end of PROJECTS CARDS*/
 
 /* begin of PROJECT DETAILS */
 .grid-container-2-0 {
-    border: 3px solid var(--light-main-color);
     background: var(--terciary-color);
-    border-radius: 6px;
     padding: 10px;
     position: relative;
 }
@@ -223,11 +249,11 @@ body {
     flex: 1;
     color: var(--terciary-color);
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
-    font-weight: 800;
+    font-weight: 400;
     font-size: 20px;
     align-items: center;
     justify-content: center;
-    background: var(--light-secondary-color);
+    background: var(--dark-main-color);
     border-radius: 4px;
 }
 
@@ -304,7 +330,7 @@ body {
     display: block;
     height: fit-content;
     max-height: 30%;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .grid-container-2-0-3-1,
@@ -385,6 +411,7 @@ body {
     width: 8vw !important;
     color: var(--terciary-color) !important;
     background: var(--light-secondary-color) !important;
+    padding: 2px 0;
 }
 
 .btn-primary:hover {
@@ -398,12 +425,10 @@ body {
 /* end of PROJECT DETAILS */
 /* begin of PROJECT LIST */
 .grid-container-2-1 {
-    border: 3px solid var(--light-main-color);
     background: var(--terciary-color);
-    border-radius: 6px;
     padding: 10px;
     position: relative;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .grid-container-2-1-0,
@@ -419,11 +444,11 @@ body {
     flex: 1;
     color: var(--terciary-color);
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
-    font-weight: 800;
+    font-weight: 400;
     font-size: 20px;
     align-items: center;
     justify-content: center;
-    background: var(--light-secondary-color);
+    background: var(--dark-main-color);
     border-radius: 4px;
 }
 
@@ -535,7 +560,7 @@ body {
     border: 4px solid var(--dark-main-color);
 }
 .input-box-projects {
-    padding: 4px 0;
+    padding: 6px 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -544,14 +569,29 @@ body {
 .input-box-projects input{
     width: 400px;
     border: 1px solid var(--dark-main-color);
-    height: 20px;
+    height: 35px;
     border-radius: 5px;
 }
 .input-box-projects select{
     width: 400px;
     border: 1px solid var(--dark-main-color);
-    height: 20px;
+    height: 35px;
     border-radius: 5px;
+    margin-top: 6px;
+}
+
+.new-item{
+    margin-top: 10px;
+    color: #fff;
+    background-color: var(--light-secondary-color);
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+    transition: .3s;
+}
+.new-item:hover{
+    background-color: var(--dark-main-color);
+    cursor: pointer;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -592,45 +632,6 @@ input[type=number]::-webkit-outer-spin-button {
 .modal_close:hover ion-icon{
     color: var(--light-secondary-color);
 }
-.underline{
-    margin-top: 20px;
-    width: 492px;
-    height: 5px;
-    background: #414141;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    overflow: hidden;
-}
-.underline span{
-    width: 100px;
-    height: 100%;
-    background-color: #7096d1;
-    position: 3px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    animation: moving 3s linear infinite;
-}
-@keyframes moving{
-    0%{
-        left: -20px;
-    }
-    100%{
-        left: 100%;
-    }
-}
-@media (max-width: 700px){
-    footer{
-        bottom: unset;
-    }
-    .col{
-        flex-basis: 100%;
-    }
-    .col:nth-child(2), .col:nth-child(3){
-        flex-basis: 100%;
-    }
-}
 
 
 
@@ -645,10 +646,19 @@ input[type=number]::-webkit-outer-spin-button {
     background-color: var(--dark-main-color);
     color: #fff;
     transition: .3s;
-    height: 20px;
+    height: 35px;
 }
-.emp_allo_hours button:hover{
-    background-color: var(--light-secondary-color);
+
+
+.add_btn{
+    margin-left: -29px;
+    width: 30px;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: var(--dark-main-color);
+    color: #fff;
+    transition: .3s;
+    height: 30px;
 }
 /* end of MODAL */
 

@@ -59,7 +59,9 @@ function getEmployeesList() {
                     </button>
                 </div>`
     );
-  }
+    //document.getElementById('pessoaltotal').innerHTML = res.length;
+
+  } 
 
   //chamada 'get' para ter informções sobre id/nome completo, posição e outras ifnromações importantes dos funcionários.
   document.getElementById("id").innerHTML = res[0].id;
@@ -111,6 +113,8 @@ function postEmployee() {
     }),
   });
 }
+
+
 
 function delEmployee(id) {
   var url = `http://127.0.0.1:3000/employees/${id}`;
@@ -217,3 +221,7 @@ function updateForm(id) {
     document.getElementById("btnPJ").classList.add("buttonActive");
   }
 }
+
+
+
+

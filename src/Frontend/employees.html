@@ -24,7 +24,7 @@
                 Home
             </div>
             <div onclick="getEmployees()">
-                <ion-icon class="people-icon" name="people"></ion-icon>
+                <ion-icon class="people-icon active" name="people"></ion-icon>
                 <span></span>
                 Pessoas
             </div>
@@ -50,8 +50,8 @@
     <div class="pageContainer">
         <div class="grid-container-1">
             <!-- begin of DOUGHNUT CHART -->
-            <div>
-                <canvas class="doughnut-chart" id="doughnutChart"></canvas>
+            <div class="top_card">
+                <h3>Funcionários</h3>
             </div>
             <!-- end of DOUGHNUT CHART -->
             <!-- begin of EMPLOYEE CARDS -->
@@ -66,6 +66,7 @@
                     <div class="icons-3">
                         <p>Pessoal total</p>
                     </div>
+                    <p class="placeholder">placeholder</p>
                 </div>
                 <div class="icons">
                     <div class="icons-1">
@@ -77,6 +78,7 @@
                     <div class="icons-3">
                         <p><h3>44%</h3>Terceiro</p>
                     </div>
+                    <p class="placeholder">placeholder</p>
                 </div>
                 <div class="icons">
                     <div class="icons-1">
@@ -88,6 +90,7 @@
                     <div class="icons-3">
                         <p><h3>40%</h3>Amazonas</p>
                     </div>
+                    <p class="placeholder">placeholder</p>
                 </div>
                 
             </div>
@@ -97,7 +100,7 @@
             <!-- begin of EMPLOYEES DETAILS -->
             <div class="grid-container-2-0">
                 <div class="grid-container-2-0-0">
-                        Detalhes do Colaborador
+                        Detalhes do Funcionário
                 </div>
                 <div class="grid-container-2-0-1">
                     <div class="grid-container-2-0-1-1">
@@ -170,7 +173,7 @@
             <!-- begin of PEMPLOYEES LIST -->
             <div class="grid-container-2-1" id="employeeDiv">
                 <div class="grid-container-2-1-0">
-                    Lista de Pessoas
+                    Lista de Funcionários
                 </div>
             </div>
             <!-- end of PEMPLOYEES LIST -->
@@ -184,11 +187,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <img class="yamaha-logo" src="img/yamaha_logo.png">
-                    <h5 class="modal-title">Inclusão de novo colaborador</h5>
+                    <h5 class="modal-title">Inclusão de novo funcionário</h5>
                     <button type="button" class="modal_close"  data-bs-dismiss="modal"><ion-icon name="close-circle-outline"></ion-icon></button>
                 </div>
-                <h3><div class="underline"><span></span></div></h3>
+                
                 <div class="modal-body">
                     <form>
                         <div class="input-box">
@@ -197,7 +199,13 @@
                         </div>
                         <div class="input-box">
                             <span>Cargo:</span>
-                            <input name="position_form" id="position_form" type="text" required>
+                            <select name="position_form" id="position_form" type="text" required>
+                                <option value="">Selecione</option>
+                                <option value="Gerente">Gerente</option>
+                                <option value="Analista Jr">Analista Jr</option>
+                                <option value="Analista Pl">Analista Pl</option>
+                                <option value="Analista Sr">Analista Sr</option>
+                            </select>
                         </div>
                         <div class="input-box">
                             <span>Horas legais:</span>
@@ -239,55 +247,75 @@
             </div>
         </div>
     </div>
+
+
+   
+   
     <!-- end of POST MODAL -->
 
-    <!-- begin of PATCH MODAL -->
-    <div class="modal fade" id="patchModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Alteração de dados cadastrais</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="input-box">
-                            <span>Nome:</span>
-                            <input name="full_name_form_2" id="full_name_form_2" type="text" required>
-                        </div>
-                        <div class="input-box">
-                            <span>Cargo:</span>
-                            <input name="position_form_2" id="position_form_2" type="text" required>
-                        </div>
-                        <div class="input-box">
-                            <span>Horas legais:</span>
-                            <input name="legal_hours_form_2" id="legal_hours_form_2" type="number" required>
-                        </div>
-                        <div class="input-box">
-                            <span>Horas totais:</span>
-                            <input name="total_hours_form_2" id="total_hours_form_2" type="number" required>
-                        </div>
-                        <div class="input-box">
-                            <span>Horas alocadas:</span>
-                            <input name="allocated_hours_form_2" id="allocated_hours_form_2" type="number" required>
-                        </div>
-                        <div class="input-box">
-                            <span>Regime contratual:</span>
-                            <input name="outsourced_form_2" id="outsourced_form_2" type="text" required>
-                        </div>
-                        <div class="input-box">
-                            <span>Local de trabalho:</span>
-                            <input name="local_form_2" id="local_form_2" type="text" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="patchButton" onclick="patchEmployeeII()">
-                            Alterar
-                        </button>
-                    </form>
-                </div>
+   <!-- begin of PATCH MODAL -->
+   <div class="modal fade" id="patchModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar colaborador</h5>
+                <button type="button" class="modal_close"  data-bs-dismiss="modal"><ion-icon name="close-circle-outline"></ion-icon></button>
+            </div>
+            
+            <div class="modal-body">
+                <form>
+                    <div class="input-box">
+                        <span>Nome:</span>
+                        <input name="full_name_form_2" id="full_name_form_2" type="text" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Cargo:</span>
+                        <select name="position_form_2" id="position_form_2" type="text" required>
+                            <option value="">Selecione</option>
+                            <option value="Gerente">Gerente</option>
+                            <option value="Analista Jr">Analista Jr</option>
+                            <option value="Analista Pl">Analista Pl</option>
+                            <option value="Analista Sr">Analista Sr</option>
+                        </select>
+                        
+                    </div>
+                    <div class="input-box">
+                        <span>Horas legais:</span>
+                        <input name="legal_hours_form_2" id="legal_hours_form_2" type="number" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Horas totais:</span>
+                        <input name="total_hours_form_2" id="total_hours_form_2" type="number" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Horas alocadas:</span>
+                        <input name="allocated_hours_form_2" id="allocated_hours_form_2" type="number" required>
+                    </div>
+                    <div class="input-box">
+                        <span>Regime contratual:</span>
+                        <select name="outsourced_form_2" id="outsourced_form_2" type="text" required>
+                            <option value="">Selecione</option>
+                            <option value="1">Próprio</option>
+                            <option value="2">Terceiro</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span>Local de trabalho:</span>
+                        <select name="local_form_2" id="local_form_2" type="text" required>
+                            <option value="">Selecione</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="São Paulo">São Paulo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-modal-cancel" id="patchButton" onclick="patchEmployeeII()">
+                        Alterar
+                    </button>
+                </form>
             </div>
         </div>
     </div>
-    <!-- end of PATCH MODAL -->
+</div>
+<!-- end of PATCH MODAL -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="employees.js"></script>
