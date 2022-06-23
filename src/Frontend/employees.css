@@ -16,7 +16,7 @@
 }
 body {
     background: linear-gradient(136deg, var(--terciary-color), var(--light-main-color));
-    height: 115vh;
+    height: 100vh;
     padding-left: 8vw;
 }
 /* begin of NAVIGATION BAR */
@@ -141,7 +141,7 @@ body {
       rgba(1, 20, 192, 0.724),rgba(255, 255, 255, 0)
     ),
     url("./img/moto.jpg") no-repeat;
-    background-size: 450px;
+    background-size: 483px;
     border-radius: 10px;
 }
 .top_card h3{
@@ -191,7 +191,7 @@ body {
 }
 .placeholder{
     color: orange;
-    font-size: 8px;
+    font-size: 12px;
     text-align: center;
     padding-bottom: 5px;
     float: right;

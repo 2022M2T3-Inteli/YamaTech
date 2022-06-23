@@ -16,7 +16,7 @@
 }
 body {
     background: linear-gradient(136deg, var(--terciary-color), var(--light-main-color));
-    height: 120vh;
+    height: 100vh;
     padding-left: 8vw;
 }
 /* begin of NAVIGATION BAR */
@@ -151,7 +151,7 @@ body {
       rgba(1, 20, 192, 0.724),rgba(255, 255, 255, 0)
     ),
     url("./img/moto2.jpg") no-repeat;
-    background-size: 450px;
+    background-size: 483px;
     border-radius: 10px;
 }
 .top_card2 h3{
@@ -196,7 +196,7 @@ body {
 }
 .placeholder{
     color: orange;
-    font-size: 8px;
+    font-size: 12px;
     text-align: center;
     padding-bottom: 5px;
     float: right;
@@ -376,12 +376,13 @@ body {
     padding: 10px;
     position: relative;
     overflow-y: scroll;
+    max-height: 58vh;
 }
 .grid-container-2-1-0,
 .grid-container-2-1-1 {
     display: flex;
     flex-direction: row;
-    height: 9%;
+    height: 8%;
     margin-bottom: 5px;
     cursor: pointer;
 }
