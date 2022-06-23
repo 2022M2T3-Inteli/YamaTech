@@ -1,15 +1,18 @@
 # Inteli - Instituto de Tecnologia e Liderança 
 
-<p align="center">
-<a href= "https://www.gazetanewsguarulhos.com.br/inteli-anuncia-patrocinio-do-w7m-gaming/"><img src="https://www.gazetanewsguarulhos.com.br/wp-content/uploads/2021/11/Inteli-2-1024x569-1-696x387.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
-</p>
+<div align="center">
+<a href= "https://www.gazetanewsguarulhos.com.br/inteli-anuncia-patrocinio-do-w7m-gaming/"><img  src="https://www.gazetanewsguarulhos.com.br/wp-content/uploads/2021/11/Inteli-2-1024x569-1-696x387.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+</div>
+<a href="https://www.inteli.edu.br/"><p align="center">Logo Oficial do Inteli</p></a>
 
 # Gerenciador e Alocador de Capacity
 
 ## 🏍️ Grupo 3: YamaTech
 
 <p align="center">
-<a href= "https://adalove.inteli.edu.br/#"><img src="https://adalove.inteli.edu.br/newada-img/groups/c1503ec9-20d3-4fb7-b4cd-3afd12f57c37.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://adalove.inteli.edu.br/#"><img height="350px" width="350px" src="https://adalove.inteli.edu.br/newada-img/groups/c1503ec9-20d3-4fb7-b4cd-3afd12f57c37.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href="https://adalove.inteli.edu.br/#"><p align="center">Logo Oficial do Yamatech</p></a>
+  
 </p>
 
 ## 🥇 Integrantes: 
@@ -26,7 +29,7 @@
 O propósito do sistema Web é realizar a alocação de funcionários em projetos da Yamaha e apresentar uma análise geral da situação de desenvolvimento em cada projeto. O site será utilizado por um gestor/gerente para cadastro de projetos, funcionários e consulta de dados nos dashboards. Também, há a possibilidade de selecionar distribuições personalizadas ao cadastrar um projeto com um modelo pré-definido, o que possibilita uma alocação mais ágil e eficiente. 
 
 <p align="center">
-<a href= "https://imgur.com/"><img src="https://i.imgur.com/He2oBYu.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
+<a href= "https://imgur.com/"><img src="https://i.imgur.com/He2oBYu.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0">Dashboard do site</a>
 </p>
 
 ## 📁 Estrutura de pastas
@@ -88,6 +91,8 @@ node app.js
 5. Agora você pode acessar a aplicação inserindo o link http://localhost:3000/ na barra de pesquisa do seu navegador 
 6. O servidor está online.
 
+<h3> Heroku </h3>
+1. Aqui encontra-se um modo de abrir o site via web ao clicar no seguinte link: https://yamatech.herokuapp.com/
 
 ## 🗃 Histórico de lançamentos
 
